@@ -1461,7 +1461,7 @@ case 'بروفايل': case 'profile': case 'ان':
       pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
     }
 
-     const profilexx = `*「  Profile Info  」*\n\n*User Name* : ${pushname}\n*Bio* : ${bioo}\n*Group Admin Status* : ${adn}\n*Level* : ${levelMenu}\n*Exp* : ${xpMenu} out of ${reqXp}\n*Role* : ${role}`
+     const profilexx = `*「 *صورتك/ي جميلة*🤍❄️ 」*\n\n*المنشن* : ${pushname}\n*البايو* : ${bioo}\n*حالتك في نقابة* : ${adn}\n*لفل* : ${levelMenu}\n*الإكس بي* : ${xpMenu} *مستمر الى* ${reqXp}\n*المستوى* : ${role}`
  
 
 
@@ -1480,11 +1480,11 @@ let buttonspro = [
             break
 
 
-case 'banchat': case 'bangroup':{
+case 'باند': case 'bangroup':{
 if (isBan) return reply(mess.banned)	 			
 if (!isCreator) return replay(mess.botowner)
 if (args[0] === "on") {
-if (isBanChat) return replay('This Group is Already Banned from using me!')
+if (isBanChat) return replay('*لقد تم منعي بفعل من هذه المجموعة❄️☃️*')
 banchat.push(from)
 replay('This Group has been banned from using me!')
 var groupe = await Miku.groupMetadata(from)
