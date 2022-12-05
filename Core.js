@@ -1803,12 +1803,12 @@ case 'delete': case 'del': {
  break
 */
 
- case 'deleteall': case 'delall': case 'delete': case 'del': {
+ case 'حذف': case 'مسح': case 'احذف': case 'امسح': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- if (!m.quoted) return reply('Please mention a message baka!')
+ if (!m.quoted) return reply('❄ *من فضلك رد على رسالة من أجل حذفها* ❄')
  let { chat, fromMe, id} = m.quoted
 
 const key = {
@@ -1824,11 +1824,11 @@ await Miku.sendMessage(m.chat, { delete: key })
 
 
 
- case 'listpc': {
+ case 'المستخدمين': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let anu = await store.chats.all().filter(v => v.id.endsWith('.net')).map(v => v)
- let teks = ` 「  Miku's pm user list  」\n\nTotal ${anu.length} users are using Miku in personal chat.`
+ let teks = ` 「 ❄*قائمة المستخدمين*❄  」\n\nالمجموع ${anu.length} مستخدمين البوت في الخاص.`
  for (let i of anu) {
   teks += `\n\nProfile : @${i.id.split('@')[0]}\nChat : ${i.unreadCount}\nLastchat : ${moment(i.conversationTimestamp * 1000).tz("Asia/Kolkata").format("DD/MM/YYYY HH:mm:ss")}`
  }
