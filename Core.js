@@ -1548,10 +1548,10 @@ case 'limituser': case 'userlimit': case 'limit':
 
 
 
-case 'ringtone': {
+case 'ringtone': case 'نغمات {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-            if (!args.join(" ")) return reply(`Example: ${prefix}ringtone black over`)
+            if (!args.join(" ")) return reply(`مثال: ${prefix}ringtone black over`)
         let { ringtone } = require('./lib/scraper')
 		let anu = await ringtone(text)
 		let result = anu[Math.floor(Math.random() * anu.length)]
@@ -1560,7 +1560,7 @@ case 'ringtone': {
 	    break
 
 
-case 'film': case 'movie': case 'moviesearch':
+case 'film': case 'movie': case 'فيلم':
 if (isBan) return reply(mess.banned)
 	if (isBanChat) return reply(mess.bangc)
 	reply(mess.waiting)
