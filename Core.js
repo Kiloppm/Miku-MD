@@ -1780,13 +1780,13 @@ replay(`${getCase(q)}`)
 break
 
 
- case 'emoji': {
+ case 'إيموجي': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply('Where is the emoji?')
+if (!args.join(" ")) return reply('❄ *أين هو الإيموجي* ❄')
 emoji.get(args.join(" ")).then(async(emoji) => {
 let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: `Here it is...`}, {quoted:m})
-await Miku.sendMessage(from, {text:"reply -s to this image to make sticker"}, {quoted:mese})
+await Miku.sendMessage(from, {text:"*وأتمنى لك يوما سعيدا {-s} أعمل ريبلي على صوره واكتب*❤"}, {quoted:mese})
 })
 }
 break
