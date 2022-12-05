@@ -1685,7 +1685,7 @@ let sections = []
 
 
   case 'grupsetting':
-    case 'groupsetting':{
+    case 'اعدادات':{
         if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
             let sections = []
@@ -1715,10 +1715,10 @@ if (isBanChat) return reply(mess.bangc)
             const sendm =  Miku.sendMessage(
 from, 
 {
-text: "Group Settings",
+text: "اعدادات الكروب",
 footer: BotName,
 title: "Set your group settings here...",
-buttonText: "Click Button",
+buttonText: "Click Button/إضغط على الزر من فضلك",
 sections
 }, { quoted : m }
 )  
@@ -1736,15 +1736,15 @@ case 'animesearchxxx': case 'anime':{
     break
 */
 
-case 'coffee': case 'kopi': {
+case 'coffee': case 'قهوه': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
                 let buttons = [
-                        {buttonId: `${prefix}coffee`, buttonText: {displayText: '>>'}, type: 1}
+                        {buttonId: `${prefix} قهوه`, buttonText: {displayText: '>>'}, type: 1}
                     ]
                     let buttonMessage = {
                         image: { url: 'https://coffee.alexflipnote.dev/random' },
-                        caption: `Here is your Coffee...`,
+                        caption: `*تم تجهيز طلبك سيدي/تي..🤍*`,
                         footer: `${BotName}`,
                         buttons: buttons,
                         headerType: 4
@@ -1755,10 +1755,10 @@ case 'coffee': case 'kopi': {
 
  
 
-case 'emojimix': {
+case 'emojimix': case 'دمج': {
 	   if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!q) reply(`*Example :* ${prefix + command} 🦉+🤣`)
+if (!q) reply(`*مثال :* ${prefix + command} 🦉+🤣`)
 let [emoji1, emoji2] = q.split`+`
 let kuntuh = await fetchJson(`https://tenor.googleapis.com/v2/featured?key=AIzaSyAyimkuYQYF_FXVALexPuGQctUWRURdCYQ&contentfilter=high&media_filter=png_transparent&component=proactive&collection=emoji_kitchen_v5&q=${encodeURIComponent(emoji1)}_${encodeURIComponent(emoji2)}`)
 for (let res of kuntuh.results) {
