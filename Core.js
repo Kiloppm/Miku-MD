@@ -454,12 +454,12 @@ var levelRole = getLevelingLevel(m.sender)
                                         addLevelingXp(m.sender, amountXp)
                                         if (requiredXp <= getLevelingXp(m.sender)) {
                                         addLevelingLevel(m.sender, 1)
-teks = `「 *User Level UP* 」\n\n@${m.sender.split("@")[0]} got leveled up!!\n\n*User XP*: ${getLevelingXp(m.sender)}\n*Level*: ${getLevel} -> ${getLevelingLevel(m.sender)}\n*Role*: ${role} \n\n`
+teks = `「 *رفع مستوى المستخدم*  」\n\n@${m.sender.split("@")[0]} تسويها!!تم\n\n*اكس بي المستخدم*: ${getLevelingXp(m.sender)}\n*مستوى*: ${getLevel} -> ${getLevelingLevel(m.sender)}\n*دور*: ${role} \n\n`
 Miku.sendMessage(m.chat, {text: teks, mentions:[m.sender]}, {quoted:m})
 }
 
                         } catch (err) {
-                                console.error("❌ An error occured !")
+                                console.error("❌ حدث خطأ!")
                         }
                 }
                 if (prefix && command) {
@@ -695,8 +695,8 @@ if (!afkTime || afkTime < 0) continue
 let reason = user.afkReason || ''
 reply(`
 Pls try not to tag him!
-He's in away from keyboard ${reason ? 'with reason ' + reason : 'no reason'}
-During ${clockString(new Date - afkTime)}
+لا تمنشنه لانه في وضع الاختفاء الأن ${reason ? 'with reason ' + reason : 'بدون سبب'}
+مده الغياب ${clockString(new Date - afkTime)}
 `.trim())
 }
 
@@ -704,8 +704,8 @@ if (db.users[m.sender].afkTime > -1) {
 let user = global.db.users[m.sender]
 reply(`
 Pls try not to tag him!
-He's Offline ${user.afkReason ? ' after ' + user.afkReason : ''}
-During ${clockString(new Date - user.afkTime)}
+لقد عدت منور بيتك ${user.afkReason ? ' after ' + user.afkReason : ''}
+مده الغياب ${clockString(new Date - user.afkTime)}
 `.trim())
 user.afkTime = -1
 user.afkReason = ''
@@ -882,13 +882,13 @@ if (antiVirtex) {
         if (AntiLinkAll)
            if (budy.includes("https://")){
         if (!isBotAdmins) return
-        bvl = `\`\`\`「  Antilink System  」\`\`\`\n\nLink sent by Admin so no action will be taken!`
+        bvl = `\`\`\`「 ❄ *منع الروابط* ❄ 」\`\`\`\n\n الأمن حر في إرسال الروابط!`
         if (isAdmins) return reply(bvl)
         if (m.key.fromMe) return reply(bvl)
         if (isCreator) return reply(bvl)
         kice = m.sender
         await Miku.groupParticipantsUpdate(m.chat, [kice], 'remove')
-        Miku.sendMessage(from, {text:`\`\`\`「  Antilink System  」\`\`\`\n\n@${kice.split("@")[0]} Baka has been removed for sending links in this group!`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
+        Miku.sendMessage(from, {text:`\`\`\`「 ❄ *منع الروابط* ❄ 」\`\`\`\n\n@${kice.split("@")[0]} تم طرد هاذا الباكا بسبب إرسال الرابط !`, contextInfo:{mentionedJid:[kice]}}, {quoted:m})
         } else {
         }
         
