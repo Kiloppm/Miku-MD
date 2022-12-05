@@ -10,12 +10,12 @@ global.antitags = true
 global.Owner = ['212645830816']
 global.OwnerNumber = ['212645830816']
 global.ownertag = ['212645830816']
-global.BotName = "Miku"
-global.packname = "Miku bot"
-global.author = "By: Fantox"
-global.OwnerName = "Fantox"
-global.BotSourceCode = "https://github.com/FantoX001/Miku-MD"
-global.SupportGroupLink = "https://chat.whatsapp.com/JcBzjRIxM5UHfuJbt0KrWt"
+global.BotName = "❄️𝐍𝐞𝐫𝐨 ♡ 𝐬𝐚𝐦𝐚❄️ "
+global.packname = "❄️𝐍𝐞𝐫𝐨❄️"
+global.author = "❄️𝐁𝐨𝐭❄️"
+global.OwnerName = "⚡ 𝐝𝐚𝐛𝐢-𝐒𝐚𝐦𝐚 ⚡"
+global.BotSourceCode = "https://instagram.com/m_o_s_71?igshid=YmMyMTA2M2Y="
+global.SupportGroupLink ="https://www.tiktok.com/@dabi2392?_r"
 global.sessionName = "session"
 
 
@@ -58,19 +58,19 @@ global.ntilink = []
 
 
 global.mess = {
-    jobdone: 'Job done...',
-    useradmin: 'Sorry, only *Group Admins* can use this command *Baka*!',
-    botadmin: 'Sorry, i cant execute this command without being an *Admin* of this group.',
-    botowner: 'Only my *Owner* can use this command, Baka!',
-    grouponly: 'This command is only made for *Groups*, Baka!',
-    privateonly: 'This command is only made for *Private Chat*, Baka!',
-    botonly: 'Only the *Bot itself* can use this command!',
-    waiting: 'Chotto Matte...',
-    nolink: 'Please provide me *link*, Baka!',
-    error: 'An error occurd!',
-    banned: 'You are *Banned* fron using commands!',
-    bangc: 'This Group is *Banned* from using Commands!',
-    nonsfw: 'Dont be a pervert Baka! This is not a NSFW enabled group!'
+    jobdone: '*『 تم......❄️ 』*',
+    useradmin: '*『 الامر هاذا خاص بي المشرفين فقط❄️! 』*',
+    botadmin: '*『 أحتاج الإشراف لتفعيل الأمر❄️ 』*',
+    botowner: '*『 الأمر هاذا خاص بي المالك❄️ 』*',
+    grouponly: '*『 الميزة هذه للبوت فقط️❄️』*',
+    privateonly: '*『 الميزة هذه في خاص فقط❄️』*',
+    botonly: '*『 الميزة هذه للبوت فقط️❄️』*',
+    waiting: '*『 أنتضر من فضلك...❄️』*',
+    nolink: '*『 أين هو الرابط ؟ ❄️️』*',
+    error: '*『 ايرور ...❄️️』*',
+    banned: '*『 انت محظور من استخدام البوت تواصل مع مطور من أجل إلغاء حظرك..❄️! 』*',
+    bangc: '*『أعتذر لقد تم منع استخدامي في هذه المجموعة🌫️❄️️』*',
+    nonsfw: '*『 أستغفر لله وأتوب إليه تقرب من ربك ان لله غفور رحيم.📿❄️! 』*'
     
 }
 
