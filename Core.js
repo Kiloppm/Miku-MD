@@ -1569,17 +1569,17 @@ xfarrapi.Film(q)
     .then(data => {console.log(data)
     let krl = `*Search Term:* ${q}\n\n`
 			    for (let i of data) {
-                krl += (`-----------------------------------------------------------------------------\n\n\n*Movie Name:* ${i.judul}\n *Quality :* ${i.quality}\n *Type : ${i.type}*\n *Uploaded on :* ${i.upload}\n *Source URL :* ${i.link}\n\n\n`)
+                krl += (`-----------------------------------------------------------------------------\n\n\n*اسم الانمي:* ${i.judul}\n *الجوده :* ${i.quality}\n *الكاتب أو المنتج : ${i.type}*\n *تم رفع في :* ${i.upload}\n *المصدر :* ${i.link}\n\n\n`)
                 }
                Miku.sendMessage(from, { image: { url: data[0].thumb}, caption: krl }, { quoted: fdocs })
 });
 break
 
 
-case 'wallpaper': case 'animewallpaper': case 'animewall': {
+case 'wallpaper': case 'animewallpaper': case 'خلفيه': {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply("Please enter a term to search!")
+if (!args.join(" ")) return reply("*أكتب اسم الانمي أو فلم بلإنغليزي من فضلك*❄️🤍")
 const { AnimeWallpaper } =require("anime-wallpaper")
 const wall = new AnimeWallpaper();
 const pages = [1,2,3,4];
