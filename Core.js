@@ -1333,7 +1333,7 @@ const ftroli = {
 
 
     const menulist = `
-    Konichiwa ${pushname} dear 👋. I am ${global.BotName}, a bot developed by: Fantox to take your WhatsApp usage into next level.
+   ❄️ 𝐍𝐞𝐫𝐨 𝐁𝐨𝐭 ❄️ ${pushname} أن نيرو تشان ❄👋. I am ${global.BotName},بوت تم تطويري بواسطة: دابي سان للانتقال باستخدام واتساب إلى المستوى التالي.
         
        「 System Info 」
     
@@ -1410,12 +1410,12 @@ return list[Math.floor(list.length * Math.random())]
 
 switch(command) {
 	
-    case 'sc': case 'script': case 'sourcecode': {
+    case 'sc': case 'تبرع': case 'سكريبت': {
         if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
-    teks = `*${global.BotName}'s Script*\n\n*GitHub*: ${global.BotSourceCode}\n\nDont forget to follow me on *GitHub* and give a ⭐️ to my projects. `
+    teks = `*${global.BotName}' سكربت\n\nقناتي تك: ${global.BotSourceCode}\n\n⭐ لاتنسى الاشتراك في قناتي على تك. `
     let buttons = [
-    {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Bot Menu✨'}, type: 1}
+    {buttonId: `${prefix}menu`, buttonText: {displayText:'❄ نيرو الأوامر ❄'}, type: 1}
     ]
     let buttonMessage = {
     image: Thumb,
@@ -1439,7 +1439,7 @@ switch(command) {
     break
 
 
-case 'me': case 'profile': case 'p':
+case 'بروفايل': case 'profile': case 'ان':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
   if (!isDarah){ addInventoriDarah(m.sender, DarahAwal) }
@@ -1450,7 +1450,7 @@ case 'me': case 'profile': case 'p':
      var flob = await getBuffer(picak+'User Profile')
      var bio= await Miku.fetchStatus(m.sender)
      var bioo = bio.status
-     const adn= isAdmins? "True":"False"
+     const adn= isAdmins? "أدمن":"عضو"
      
      try {
         
