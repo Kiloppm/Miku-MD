@@ -1493,7 +1493,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-Miku.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nThis group is banned from using bot. So, here nobody can use me anymore!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+Miku.sendMessage(from, {text: `\`\`\`「 ملاحظة 」\`\`\`\n\n لقد تم منعي من هذه مجموعة لهاذا لا يمكنكم إستخدامي`, : { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!isBanChat) return replay('*لقد تم منعي بفعل من هذه المجموعة❄️☃️*')
 let off = banchat.indexOf(from)
@@ -1504,7 +1504,7 @@ replay('*لقد تم رفع الحظر عن هذه المجموعة بنجاح �
   { buttonId: `${prefix}bangroup on`, buttonText: { displayText: 'حظر' }, type: 1 },
   { buttonId: `${prefix}bangroup off`, buttonText: { displayText: 'الغاء' }, type: 1 }
   ]
-  await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please choose any Button below.\n\n *On / Off*`, `${global.BotName }`, m)
+  await Miku.sendButtonText(m.chat, buttonsntnsfw, `تفضل سيدي يمكنك الإختيار`, `${global.BotName }`, m)
   }
   }
   break
