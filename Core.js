@@ -1486,7 +1486,7 @@ if (!isCreator) return replay(mess.botowner)
 if (args[0] === "on") {
 if (isBanChat) return replay('*لقد تم منعي بفعل من هذه المجموعة❄️☃️*')
 banchat.push(from)
-replay('This Group has been banned from using me!')
+replay('*أعتذر لقد تم منع إستخدامي في هذه المجموعة*🤍🌫️ ')
 var groupe = await Miku.groupMetadata(from)
 var members = groupe['participants']
 var mems = []
@@ -1495,14 +1495,14 @@ mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
 Miku.sendMessage(from, {text: `\`\`\`「 Notice 」\`\`\`\n\nThis group is banned from using bot. So, here nobody can use me anymore!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
-if (!isBanChat) return replay('This Group is Already Banned from using me!')
+if (!isBanChat) return replay('*لقد تم منعي بفعل من هذه المجموعة❄️☃️*')
 let off = banchat.indexOf(from)
 banchat.splice(off, 1)
-replay('This Group has been *unbanned* from using me!')
+replay('*لقد تم رفع الحظر عن هذه المجموعة بنجاح إستمتعو🤍☕*')
 } else {
   let buttonsntnsfw = [
-  { buttonId: `${prefix}bangroup on`, buttonText: { displayText: 'Ban' }, type: 1 },
-  { buttonId: `${prefix}bangroup off`, buttonText: { displayText: 'Unban' }, type: 1 }
+  { buttonId: `${prefix}bangroup on`, buttonText: { displayText: 'حظر' }, type: 1 },
+  { buttonId: `${prefix}bangroup off`, buttonText: { displayText: 'الغاء' }, type: 1 }
   ]
   await Miku.sendButtonText(m.chat, buttonsntnsfw, `Please choose any Button below.\n\n *On / Off*`, `${global.BotName }`, m)
   }
