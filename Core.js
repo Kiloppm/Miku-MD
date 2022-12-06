@@ -2446,12 +2446,12 @@ if (isBanChat) return reply(mess.bangc)
  break
 
 
-case'admin': {
+case'admin': case'منشن الأدمن': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
- if (!text) return replay(`*Please quote or write a meaningful message to tag admins to*`)
- let teks = `*「 Tag Admins 」*
+ if (!text) return replay(`❄*أكتب الأمر وبعدها رسالة من فضلك لك/ي*❄`)
+ let teks = `*「 منشن الأدمن 」*
   
  *Message : ${text}*\n\n`
  for (let mem of groupAdmins) {
