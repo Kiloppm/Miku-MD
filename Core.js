@@ -2269,28 +2269,28 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'ban': {
+   case 'ban':case 'حظر': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args[0]) return replay(`Select add or del (add to ban, del to unban), For Example: Reply *${prefix}ban add* to the user you want to ban.`)
+if (!args[0]) return replay(`❄مثال *(حذف إلغاء حظر, اضافه الى حظر)*, على سبل مثال: رد *${prefix}ban add* to the user you want to ban.`)
 if (args[1]) {
 orgnye = args[1] + "@s.whatsapp.net"
 } else if (m.quoted) {
 orgnye = m.quoted.sender
 }
 const isBane = banUser.includes(orgnye)
-if (args[0] === "add") {
+if (args[0] === "فتح") {
 if (isBane) return ads('User is already banned.')
 banUser.push(orgnye)
-replay(`Successfully Banned the user.`)
-} else if (args[0] === "del") {
+replay(`❄*تم حظر مستخدم بنجاح*❄`)
+} else if (args[0] === "قفل") {
 if (!isBane) return ads('User is already unbanned.')
 let delbans = banUser.indexOf(orgnye)
 banUser.splice(delbans, 1)
-replay(`Successfully Unbanned the user.`)
+replay(`*❄تم الغاء الحظر بنجاح❄*`)
 } else {
-replay("Error")
+replay("*Error😶*")
 }
 }
 break
