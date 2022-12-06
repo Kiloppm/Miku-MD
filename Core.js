@@ -2415,29 +2415,29 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'setgrouppp': case 'setgruppp': case 'setgcpp': {
+ case 'setgrouppp': case 'تغير الصوره': case 'setgcpp': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- if (!quoted) return replay(`Send/Reply Image With Caption ${prefix + command}`)
- if (!/image/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command} to change the Profile Pic of this group.`)
- if (/webp/.test(mime)) return replay(`Send/Reply Image With Caption ${prefix + command} to change the Profile Pic of this group.`)
+ if (!quoted) return replay(`❄*رد على صوره التي تريد وضعها وأكتب الأمر*❄${prefix + command}`)
+ if (!/image/.test(mime)) return replay(`❄*رد على صوره التي تريدها وأكتب الأمر ${prefix + command} لتغير صوره هذه المجموعة*❄`)
+ if (/webp/.test(mime)) return replay(`❄*رد على صوره التي تريدها وأكتب الأمر ${prefix + command} لتغير صوره هذه مجموعة*❄`)
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
  await Miku.updateProfilePicture(m.chat, { url: media }).catch((err) => fs.unlinkSync(media))
  replay(mess.jobdone)
  }
  break
 
- case 'tag': case 'tagall': case 'all':{
+ case 'منشن': case 'tagall': case 'تاك':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `「 _Tag All_ 」
+ let teks = `「 _منشن جماعي_ 」
   
- *Message : ${args.join(" ") ? args.join(" ") : 'no message'}*\n\n`
+ *الرساله : ${args.join(" ") ? args.join(" ") : 'لاتوجد رساله'}*\n\n`
  for (let mem of participants) {
  teks += `» @${mem.id.split('@')[0]}\n`
  }
