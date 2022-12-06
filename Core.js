@@ -2170,34 +2170,34 @@ await Miku.sendMessage(m.chat, { delete: key })
    break
 
 
-   case 'antilinkall': {
+   case 'antilinkall':case 'الروابط': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
  if (args[0] === "on") {
- if (AntiLinkTwitter) return replay('Already activated')
+ if (AntiLinkTwitter) return replay('❄*نشط بلفعل*❄')
  ntilinkall.push(from)
- replay('Enabled all antilink !')
+ replay('❄*تم تفعيل منع جميع الروابط*❄ !')
  var groupe = await Miku.groupMetadata(from)
  var members = groupe['participants']
  var mems = []
  members.map(async adm => {
  mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
  })
- Miku.sendMessage(from, {text: `\`\`\`「 Warning 」\`\`\`\n\nAntilink System Activated!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
+ Miku.sendMessage(from, {text: `\`\`\`「 ❄*تحذير*❄ 」\`\`\`\n\nتم تنشيط نضام الروابط أي شخص يرسل رابط سيتم طرده!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
  } else if (args[0] === "off") {
- if (!AntiLinkAll) return replay('Already deactivated')
+ if (!AntiLinkAll) return replay('❄*تم الغاء تنشيطه بلفعل*❄')
  let off = ntilinkall.indexOf(from)
  ntilinkall.splice(off, 1)
- replay('Disabled all antilink !')
+ replay('❄*تعطيل منع جمع الروابط*❄ !')
  } else {
    let buttonsntilink = [
-   { buttonId: `${prefix}antilinkall on`, buttonText: { displayText: 'On' }, type: 1 },
-   { buttonId: `${prefix}antilinkall off`, buttonText: { displayText: 'Off' }, type: 1 }
+   { buttonId: `${prefix}antilinkall on`, buttonText: { displayText: 'فتح' }, type: 1 },
+   { buttonId: `${prefix}antilinkall off`, buttonText: { displayText: 'غلق' }, type: 1 }
    ]
-   await Miku.sendButtonText(m.chat, buttonsntilink, `Please click the button below\n\nOn to enable\nOff to disable`, `${global.BotName}`, m)
+   await Miku.sendButtonText(m.chat, buttonsntilink, `الرجاء الإختيار من زر\n\nفتح\nقفل`, `${global.BotName}`, m)
    }
    }
    break
