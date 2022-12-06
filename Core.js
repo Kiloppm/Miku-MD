@@ -1548,7 +1548,7 @@ case 'limituser': case 'userlimit': case 'limit':
 
 
 
-case 'ringtone': case 'نغمات {
+case 'ringtone': case 'نغمات': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
             if (!args.join(" ")) return reply(`مثال: ${prefix}ringtone black over`)
@@ -1888,22 +1888,22 @@ await Miku.sendMessage(m.chat, { delete: key })
  }
  }
 
-   case 'leveling':
+   case 'المستوى':case 'leveling':
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return reply(mess.useradmin)
- if (args.length < 1) return reply('Type on to *Enable*\nType off to *Disable*')
- if (args[0] === 'on'){
- if (isLeveling) return reply(`Already activated`)
+ if (args.length < 1) return reply('❄*اكتب الأمر وفتح\nأكتب الأمر وقفل*❄')
+ if (args[0] === 'فتح'){
+ if (isLeveling) return reply(`❄*الأمر نشط بلفعل*❄`)
  _leveling.push(from)
  fs.writeFileSync('./database/leveling.json', JSON.stringify(_leveling))
- reply('Leveling activated')
- } else if (args[0] === 'off'){
+ reply('❄*تفعيل تسوية*❄')
+ } else if (args[0] === 'قفل'){
  let anu = _leveling.indexOf(from)
  _leveling.splice(anu, 1)
  fs.writeFileSync('./database/leveling.json', JSON.stringify(_leveling))
- reply('Leveling deactivated')
+ reply('❄*تم غلق بلفعل*❄')
  } 
  break
 
