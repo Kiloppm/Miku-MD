@@ -2446,7 +2446,7 @@ if (isBanChat) return reply(mess.bangc)
  break
 
 
-case'admin': case'منشن الأدمن': {
+case'admin': case'منشن الأدمن': case 'الأدمن': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2462,7 +2462,7 @@ case'admin': case'منشن الأدمن': {
  break
 
 
- case 'hidetag': {
+ case 'hidetag': case 'وهمي': case 'مخفي': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2577,13 +2577,13 @@ let mentioned = participants.map(v => v.jid)
 
 
 
- case 'grouplink': case 'gclink': {
+ case 'grouplink': case 'لينك': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let response = await Miku.groupInviteCode(m.chat)
- Miku.sendMessage(m.chat, {text:`*Group Name:* *${groupMetadata.subject}* \n\n*Group Link :* \nhttps://chat.whatsapp.com/${response}l`, "contextInfo": {
+ Miku.sendMessage(m.chat, {text:`*إسم المجموعة❄ :* *${groupMetadata.subject}* \n\n*رابط المجموعة ❄🍿 :* \nhttps://chat.whatsapp.com/${response}l`, "contextInfo": {
  mimetype: "image/jpeg",
  text: `${global.OwnerName}`,
  "forwardingScore": 1000000000,
@@ -2604,10 +2604,10 @@ let mentioned = participants.map(v => v.jid)
  case 'resetlinkgc':
     case 'resetlinkgroup':
     case 'resetlinkgrup':
-    case 'revoke':
+    case 'رستر':
     case 'resetlink':
     case 'resetgrouplink':
-    case 'resetgclink':
+    case 'رستر-لينك':
     case 'resetgruplink': {
        if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -2619,25 +2619,25 @@ let mentioned = participants.map(v => v.jid)
     break
 
 
-    case 'group': case 'grup': {
+    case 'group': case 'كروب': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
      if (!isBotAdmins) return replay(mess.botadmin)
      if (!isAdmins && !isCreator) return replay(mess.useradmin)
      if (args[0] === 'close'){
-     await Miku.groupSettingUpdate(m.chat, 'announcement').then((res) => replay(`Group has been closed!`)).catch((err) => replay(jsonformat(err)))
+     await Miku.groupSettingUpdate(m.chat, 'announcement').then((res) => replay(`❄*تم إغلاق مجموعة بنجاح*❄!`)).catch((err) => replay(jsonformat(err)))
      } else if (args[0] === 'open'){
-     await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`Group has been opened!`)).catch((err) => replay(jsonformat(err)))
+     await Miku.groupSettingUpdate(m.chat, 'not_announcement').then((res) => replay(`❄*تم فتح مجموعة بنجاح*❄!`)).catch((err) => replay(jsonformat(err)))
      } else {
      let buttons = [
-     { buttonId: `${prefix}group open`, buttonText: { displayText: 'Open' }, type: 1 },
-     { buttonId: `${prefix}group close`, buttonText: { displayText: 'Close' }, type: 1 }
+     { buttonId: `${prefix}group open`, buttonText: { displayText: 'فتح' }, type: 1 },
+     { buttonId: `${prefix}group close`, buttonText: { displayText: 'غلق' }, type: 1 }
      ]
      let buttonMessage = {
      image: BotLogo,
      jpegThumbnail: Thumb,
-     caption: `*「 ${global.BotName} 」*\n\n_Group Setting Changer tool_:`,
+     caption: `*「 ${global.BotName} 」*\n\n_*اعادة تغير إعدادات المجموعة*_:`,
      footer: `${BotName}`,
      buttons: buttons,
      headerType: 4
