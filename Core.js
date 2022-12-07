@@ -2647,7 +2647,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'promote': {
+     case 'ارفع': case 'رفع': case 'ترقيه': case 'ترقية':{
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2658,7 +2658,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'demote': {
+     case 'انزل': case 'تنزيل': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2669,7 +2669,7 @@ let mentioned = participants.map(v => v.jid)
      }
      break
 
-     case 'remove':{
+     case 'طلع': case 'طرد': case 'اطرد': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!m.isGroup) return replay(mess.grouponly)
@@ -2681,17 +2681,17 @@ let mentioned = participants.map(v => v.jid)
      break
 
 
-     case 'join': {
+     case 'ادخل': case 'انضم': {
         if (isBan) return reply(mess.banned)	 			
      if (isBanChat) return reply(mess.bangc)
      if (!isCreator) return replay(mess.botowner)
-     if (!args[0]) return replay(`Where's the link?`)
+     if (!args[0]) return replay(`❄*أين هو الرابط*❄`)
      vdd = args[0]
      let vcc = vdd.split("https://chat.whatsapp.com/")[1]
-     if (!vcc) return replay("Link invalid!")
+     if (!vcc) return replay("❄*الرابط غلط*❄")
      if (isCreator) {
      await Miku.groupAcceptInvite(vcc).then(async(res) => replay(jsonformat(res))).catch(_ => _)
-     replay("Succes!")
+     replay("❄*النجاح*❄!")
      } else {
      Miku.query({
      tag: "iq",
@@ -2704,13 +2704,13 @@ let mentioned = participants.map(v => v.jid)
      }).then(async(res) => {
      sizny = res.content[0].attrs.size
      if (sizny < 20) {
-     teks = `Sorry, munimun 20 members are required in a group to add bot!`
+     teks = `❄*أسف جدا لاكن الأعضاء المطلوبين لدخول بوت هم  20*❄!`
      sendOrder(m.chat, teks, "667140254502463", fs.readFileSync('./Assets/pic7.jpg'), `${global.packname}`, `${global.BotName}`, "916909137213@s.whatsapp.net", "AR6NCY8euY5cbS8Ybg5Ca55R8HFSuLO3qZqrIYCT7hQp0g==", "99999999999999999999")
      } else if (sizny > 20) {
      await Miku.groupAcceptInvite(vcc).then(async(res) => replay(jsonformat(res))).catch(_ => _)
-     replay("Joined !")
+     replay(" ❄*تم انضمام*❄ !")
      } else {
-     replay("Error")
+     replay("*Error*😶")
      }
      }).catch(_ => _)
      }
