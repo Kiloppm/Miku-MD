@@ -3347,15 +3347,15 @@ case 'play': case 'أغنية': case 'song': case 'ytplay': {
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _Miku Youtube Player 2.0_  」
+ caption: `「  🔎 *البـحـث فـي الـيـوتوب*🔍  」
 
-*Title :* ${anu.title}
+*العنـوان :* ${anu.title}
 
-*Duration :* ${anu.timestamp}
-*Viewers :* ${anu.views}
-*Uploaded :* ${anu.ago}
-*Channel :* ${anu.author.name}
-*Url :* ${anu.url}`,
+*المـدة :* ${anu.timestamp}
+*المـشاهـدات :* ${anu.views}
+*تاريخ الرفع :* ${anu.ago}
+*القنــاة :* ${anu.author.name}
+*الرابــط :* ${anu.url}`,
  footer: `${global.BotName}`,
  buttons: buttons,
  headerType: 4,
@@ -3397,7 +3397,7 @@ case 'play': case 'أغنية': case 'song': case 'ytplay': {
 
 
 
- case 'ytmp3': case 'ytmusic':  case 'ytmp4': case 'ytvideo': case 'ytdl':{
+ case 'بحث': case 'ytmp3':  case 'ytmp4': case 'ytvideo': case 'ytdl':{
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!args[0]) return reply(mess.nolink)
@@ -3408,21 +3408,21 @@ case 'play': case 'أغنية': case 'song': case 'ytplay': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `${prefix}ytad2 ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
- {buttonId: `${prefix}ytvd2 ${text}`, buttonText: {displayText: '► Video'}, type: 1}
+ {buttonId: `${prefix}ytad2 ${text}`, buttonText: {displayText: '♫ صوتي'}, type: 1},
+ {buttonId: `${prefix}ytvd2 ${text}`, buttonText: {displayText: '► فيديو'}, type: 1}
 
  ]
  let buttonMessage = {
  image: { url: anu.thumbnail },
- caption: `「  _Miku Youtube Downloader 2.0_  」
+ caption: `「  📡*البـحـث فـي الـيـوتوب*📡 」
 
-*Title :* ${anu.title}
+*العنـوان :* ${anu.title}
 
-*Duration :* ${anu.timestamp}
-*Viewers :* ${anu.views}
-*Uploaded :* ${anu.ago}
-*Channel :* ${anu.author.name}
-*Url :* ${anu.url}`,
+*المـدة :* ${anu.timestamp}
+*المـشاهـدات :* ${anu.views}
+*تاريخ الرفع:* ${anu.ago}
+*القنــاة :* ${anu.author.name}
+*الرابــط :* ${anu.url}`,
  footer: `${global.BotName}`,
  buttons: buttons,
  headerType: 4,
@@ -3528,7 +3528,7 @@ break
 
 
 
-case 'smeme': case 'stickermeme': case 'stickmeme': {
+case 'smeme': case 'ملصق': case 'stickmeme': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 let { TelegraPh } = require('./lib/uploader')
@@ -3544,7 +3544,7 @@ await fs.unlinkSync(memek)
 }
 break
 
-case 'sgif': case 'sticker': case 's': {
+case 'sgif': case 'ملصق': case 's': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
  if (/image/.test(mime)) {
