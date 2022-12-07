@@ -3095,19 +3095,19 @@ if (isBanChat) return reply(mess.bangc)
              }
              break
              
-case 'twitter': case 'td': case 'twitterdl': {     
+case 'twitter': case 'تويتر': case 'twitterdl': {     
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)	             
              if (!text) return reply(`Please provide link!`)
                 if (!isUrl(args[0]) && !args[0].includes('twitter.com')) return reply(`*Invalid link!*`)
                 xfarrapi.Twitter(`${text}`).then(async (data) => {                    
-                    let txt = `「 _Twitter Downloader_ 」\n\n`
-                    txt += `*Title :* ${data.title}\n`
-                    txt += `*Quality :* ${data.medias[1].quality}\n`
-                    txt += `*Type :* ${data.medias[1].extension}\n`
-                    txt += `*Size :* ${data.medias[1].formattedSize}\n`
-                    txt += `*Duration :* ${data.medias.length}\n`
-                    txt += `*URL :* ${data.url}\n\n`
+                    let txt = `「 ❄*تنزيل تويتر*❄ 」\n\n`
+                    txt += `*العنوان :* ${data.title}\n`
+                    txt += `*الجوده :* ${data.medias[1].quality}\n`
+                    txt += `*وسائل الاعلام :* ${data.medias[1].extension}\n`
+                    txt += `*الحجم :* ${data.medias[1].formattedSize}\n`
+                    txt += `*المده :* ${data.medias.length}\n`
+                    txt += `*عنوان :* ${data.url}\n\n`
                     txt += `*${BotName}*`
                 buf = await getBuffer(data.thumbnail)    
                 Miku.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, { quoted: m })
@@ -3168,11 +3168,11 @@ case 'twddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `${prefix}menu`, buttonText: {displayText: '✨القائمة✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
- caption: "Here it is...",
+ caption: "*تم تجهيز طلبك سيدي/تي..🤍*",
  footer: `${pushname}`,
  buttons: buttons,
  headerType: 4,
@@ -3182,22 +3182,22 @@ case 'twddlxx': {
  }
  break
 
- case 'fbdl': case 'fb': case 'facebook': case 'fbmp4': {     	    
+ case 'fbdl': case 'فيسبوك': case 'facebook': case 'fbmp4': {     	    
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
               if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
                  if (!isUrl(args[0]) && !args[0].includes('facebook.com')) return reply(`Invalid link!`)
              let bocil = require('@bochilteam/scraper')  
                  bocil.facebookdlv2(`${text}`).then(async (data) => {                   
-                     let txt = `「 _Facebook Downloader_ 」\n\n`
-                     txt += `*Title :* ${data.title}\n`
-                     txt += `*Quality :* ${data.result[0].quality}\n`
-                     txt += `*Description:* ${data.description}\n`
-                     txt += `*URL :* ${text}\n\n`
+                     let txt = `「 ❄*تنزيل فايسبوك*❄ 」\n\n`
+                     txt += `*العنوان :* ${data.title}\n`
+                     txt += `*جوده :* ${data.result[0].quality}\n`
+                     txt += `*الوصف:* ${data.description}\n`
+                     txt += `*عنوان :* ${text}\n\n`
                  buf = await getBuffer(data.thumbnail)    
                  Miku.sendMessage(m.chat, { image: { url: data.thumbnail }, jpegThumbnail:buf, caption: `${txt}` }, { quoted: m })         
                  for (let i of data.result) {     
-                 Miku.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail:buf, caption: `*Quality :* ${i.quality}`}, { quoted: m })
+                 Miku.sendMessage(m.chat, { video: { url: i.url }, jpegThumbnail:buf, caption: `*الجوده :* ${i.quality}`}, { quoted: m })
                  }          
                  }).catch((err) => {
                      reply(mess.error)
@@ -3253,7 +3253,7 @@ case 'fbddlxx': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  let buttons = [
- {buttonId: `${prefix}menu`, buttonText: {displayText: '✨Menu✨'}, type: 1}
+ {buttonId: `${prefix}menu`, buttonText: {displayText: 'القائمة✨'}, type: 1}
  ]
  let buttonMessage = {
  video: {url:args[0]},
@@ -3267,7 +3267,7 @@ case 'fbddlxx': {
  }
  break
 
- case 'tiktok':{
+ case 'تكتوك':{
     if (isBan) return reply(mess.banned)
   if (isBanChat) return reply(mess.bangc)
 if (!q) return reply('Please provide the link !')
@@ -3278,10 +3278,10 @@ reply(mess.error)
 } )
  console.log(musim_rambutan)
  const mikutiktokop = musim_rambutan.result.watermark
-texttk = `_Please choose the button below_`
+texttk = `_❄*اختار من الزر*❄_`
 let buttons = [
-{buttonId: `${prefix}ttnowm ${q}`, buttonText: {displayText: 'Watermark Free'}, type: 1},
-{buttonId: `${prefix}ttaud ${q}`, buttonText: {displayText: 'Audio '}, type: 1}
+{buttonId: `${prefix}ttnowm ${q}`, buttonText: {displayText: 'علامة مائية'}, type: 1},
+{buttonId: `${prefix}ttaud ${q}`, buttonText: {displayText: 'صوتي '}, type: 1}
 ]
 let buttonMessage = {
 video: {url:mikutiktokop},
@@ -3330,7 +3330,7 @@ break
 
               
 
-case 'music': case 'play': case 'song': case 'ytplay': {
+case 'play': case 'أغنية': case 'song': case 'ytplay': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  const YT=require('./lib/ytdlcore')
@@ -3341,8 +3341,8 @@ case 'music': case 'play': case 'song': case 'ytplay': {
  let search = await yts(text)
  let anu = search.videos[0]
  let buttons = [
- {buttonId: `${prefix}ytad ${text}`, buttonText: {displayText: '♫ Audio'}, type: 1},
- {buttonId: `${prefix}ytvd ${text}`, buttonText: {displayText: '► Video'}, type: 1}
+ {buttonId: `${prefix}ytad ${text}`, buttonText: {displayText: '♫ صوتي'}, type: 1},
+ {buttonId: `${prefix}ytvd ${text}`, buttonText: {displayText: '► فيديو'}, type: 1}
 
  ]
  let buttonMessage = {
