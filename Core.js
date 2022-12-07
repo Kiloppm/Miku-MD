@@ -2984,7 +2984,7 @@ break
 case 'google': case 'جوجل': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!args[0]) return reply(`Example: ${prefix + command} <استفسار>\nالاستخدامات : ${prefix + command} apa arti cinta`)
+ if (!args[0]) return reply(`Example: ${prefix + command} <استفسار>\nالاستخدامات : ${prefix + command} ماهو الحب`)
  let google = require('google-it')
  google({'query': args.join(" ")}).then(res => {
  let teks = `「 ❄*محرك بحث غوغل*❄ 」\n\n*مصطلح البحث:* ${text}\n\n\n`
@@ -3006,7 +3006,7 @@ case 'google': case 'جوجل': {
  hx.igdl(args[0]).then(async(resed) => {
  ini_anu = []
  anu_list = []
- textbv = `「 ❄*تنزيل الاستجرام**❄ 」\n\nاسم المستخدم : ${resed.user.username ? resed.user.name : "undefined"}\nFollowers : ${resed.user.followers}`
+ textbv = `「 ❄*تنزيل الاستجرام**❄ 」\n\nاسم المستخدم : ${resed.user.username ? resed.user.name : "undefined"}\nالمتابعين : ${resed.user.followers}`
  urut = 1
  for (let i = 0; i < resed.medias.length; i++) {
  ini_anu.push({
@@ -3016,7 +3016,7 @@ case 'google': case 'جوجل': {
  }
  ilod = 1
  for (let i of ini_anu) {
- anu_list.push({انستجرام: `${prefix}ig ${i.type} ${i.url}`, buttonText: {displayText: `Media ${ilod++}`}, type: 1})
+ anu_list.push({انستجرام: `${prefix}ig ${i.type} ${i.url}`, buttonText: {displayText: `وسائل الاعلام ${ilod++}`}, type: 1})
  }
  textbv += `\n\n_Select the media below to download_`
  let buttons = anu_list
