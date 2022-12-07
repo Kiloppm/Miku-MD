@@ -2777,18 +2777,18 @@ let mentioned = participants.map(v => v.jid)
         }
         break
 
-        case 'bass': case 'blown': case 'deep': case 'earrape': case 'fast': case 'fat': case 'nightcore': case 'reverse': case 'robot': case 'slow': case 'smooth': case 'tupai':
+        case 'دبه': case 'ضوضاء': case 'بطئ': case 'earrape': case 'سريع': case 'بطئ2': case 'طفل': case 'عكس': case 'روبوت': case 'slow': case 'smooth': case 'tupai':
             try {
             let set
-            if (/bass/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
-            if (/blown/.test(command)) set = '-af acrusher=.1:1:64:0:log'
-            if (/deep/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
+            if (/دبه/.test(command)) set = '-af equalizer=f=54:width_type=o:width=2:g=20'
+            if (/ضوضاء/.test(command)) set = '-af acrusher=.1:1:64:0:log'
+            if (/بطئ/.test(command)) set = '-af atempo=4/4,asetrate=44500*2/3'
             if (/earrape/.test(command)) set = '-af volume=12'
-            if (/fast/.test(command)) set = '-filter:a "atempo=1.63,asetrate=44100"'
-            if (/fat/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
-            if (/nightcore/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
-            if (/reverse/.test(command)) set = '-filter_complex "areverse"'
-            if (/robot/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
+            if (/سريع/.test(command)) set = '-filter:a "atempo=1.63,asetrate=44100"'
+            if (/بطئ2/.test(command)) set = '-filter:a "atempo=1.6,asetrate=22100"'
+            if (/طفل/.test(command)) set = '-filter:a atempo=1.06,asetrate=44100*1.25'
+            if (/عكس/.test(command)) set = '-filter_complex "areverse"'
+            if (/روبوت/.test(command)) set = '-filter_complex "afftfilt=real=\'hypot(re,im)*sin(0)\':imag=\'hypot(re,im)*cos(0)\':win_size=512:overlap=0.75"'
             if (/slow/.test(command)) set = '-filter:a "atempo=0.7,asetrate=44100"'
             if (/smooth/.test(command)) set = '-filter:v "minterpolate=\'mi_mode=mci:mc_mode=aobmc:vsbmc=1:fps=120\'"'
             if (/tupai/.test(command)) set = '-filter:a "atempo=0.5,asetrate=65100"'
@@ -2803,7 +2803,7 @@ let mentioned = participants.map(v => v.jid)
             Miku.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
             fs.unlinkSync(ran)
             })
-            } else reply(`Pls mention any audio you want to modify _${prefix + command}_`)
+            } else reply(`❄*من فضلك رد على صوت لي بدك تغيرو*❄ _${prefix + command}_`)
             } catch (e) {
             reply(e)
             }
@@ -2823,32 +2823,32 @@ reply(`\`\`\`「 _Calculator Tool_ 」\`\`\`\n\n*Input :* ${qsd}\n*Calculation R
 }
 break
 
-case 'public': {
+case 'public': case 'عام': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.owner)
  Miku.public = true
- reply('I am now Publicly accessable!')
- Miku.setStatus(`Mode : Public`)
+ reply('❄*الأن لقد أصحبت عامة للجميع إستمتعو*💘❄')
+ Miku.setStatus(`❄*حالة البوتة: عامة*❄`)
  }
  break
  
- case 'self': {
+ case 'self': case 'خاص': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!isCreator) return reply(mess.botowner)
  Miku.public = false
- reply('Only Owner can use me now!')
- Miku.setStatus(`Mode : Self`)
+ reply('❄☠*الأن لقد أصحب المالك فقط يمكنه ستخدامي*☠❄ ')
+ Miku.setStatus(`❄*حالة البوتة: عامة*❄`)
  }
  break
 
 
-case 'toimage': case 'toimg': {
+case 'لصوره': case 'toimg': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!m.quoted) return reply('Reply Image')
-if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+if (!m.quoted) return reply('*رد على صوره*')
+if (!/webp/.test(mime)) return reply(`*من فضلك رد على ملصق لتحويله*❄🕊 *${prefix + command}*`)
 reply(mess.waiting)
 let media = await Miku.downloadAndSaveMediaMessage(quoted)
 let ran = await getRandom('.png')
@@ -2862,11 +2862,11 @@ fs.unlinkSync(ran)
 }
 break
 
-case 'tomp4': case 'tovideo': {
+case 'لفيديو': case 'tovideo': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!m.quoted) return reply('Reply Image')
- if (!/webp/.test(mime)) return reply(`Reply sticker with caption *${prefix + command}*`)
+ if (!m.quoted) return reply('*رد على صوره*')
+ if (!/webp/.test(mime)) return reply(`*اتمنى منك رد على ملصق تحويله*❄🕊 *${prefix + command}*`)
  reply(mess.waiting)
  let { webp2mp4File } = require('./lib/uploader')
  let media = await Miku.downloadAndSaveMediaMessage(quoted)
@@ -2876,11 +2876,11 @@ case 'tomp4': case 'tovideo': {
  }
  break
 
-case 'toaud': case 'toaudio': {
+case 'لصوتي': case 'toaudio': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
- if (!m.quoted) return reply(`Send/Reply Video/Audio You Want To Use As Audio With Caption ${prefix + command}`)
+ if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`*من فضلك رد على فيديو لي بدك تحولو*❄🕊 ${prefix + command}`)
+ if (!m.quoted) return reply(`*أتمنا منك رد على فيديو لي بدك تحولو*❄🕊 ${prefix + command}`)
  reply(mess.waiting)
  let media = await quoted.download()
  let { toAudio } = require('./lib/converter')
