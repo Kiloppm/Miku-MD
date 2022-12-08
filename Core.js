@@ -3671,7 +3671,7 @@ case 'شخصيتك':
 					Miku.sendMessage(from, { text: `❄*التحقق من الشخصية...*❄ : ${q}\n*الاجابة* : *${taky}*` }, { quoted: m })
 				     break
                    
- case 'dare':
+ case 'dare': case 'تحدي':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
                    const dare =[
@@ -3763,7 +3763,7 @@ case 'شخصيتك':
                    break
                        
 
-case 'truth':
+case 'truth': case 'سؤال':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
                            const truth =[
