@@ -3500,10 +3500,10 @@ case 'pinterest': case 'pin': {
 
 
 
-case 'swm': case 'take': case 'stickerwm': case 'steal':{
+case 'زرف': case 'take': case 'سرقة': case 'سرقه':{
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-if (!args.join(" ")) return reply(`Use command: -steal Miku|By: Fantox`)
+if (!args.join(" ")) return reply(`❄*أكتب الأمر ويليه الحقوق من فضلك*❄`)
 const swn = args.join(" ")
 const pcknm = swn.split("|")[0];
 const atnm = swn.split("|")[1];
@@ -3515,12 +3515,12 @@ let media = await quoted.download()
 let encmedia = await Miku.sendImageAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
 } else if (/video/.test(mime)) {
-if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds is allowed!')
+if ((quoted.msg || quoted).seconds > 11) return reply('❄*الحد الأقصى المسموح به هو 10 ثواني فقط*❄🎬!')
 let media = await quoted.download()
 let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: pcknm, author: atnm })
 await fs.unlinkSync(encmedia)
 } else {
-reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 seconds is allowed!`)
+reply(`❄*أرسل صورة أو فيديو وقم برد بلأمر*❄  ${prefix + command}\n❄*يسمح بمدة فيديو من 1 تانية إلى 9ثواني فقط*❄🎬!`)
 }
 }
 break
