@@ -3544,7 +3544,7 @@ await fs.unlinkSync(memek)
 }
 break
 
-case 'sgif': case 'ملصق': case 's': {
+case 'استيكر': case 'sticker': case 's': case 'ملصق': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
  if (/image/.test(mime)) {
@@ -3552,12 +3552,12 @@ case 'sgif': case 'ملصق': case 's': {
  let encmedia = await Miku.sendImageAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
  } else if (/video/.test(mime)) {
- if ((quoted.msg || quoted).seconds > 11) return reply('Maximum 10 seconds!')
+ if ((quoted.msg || quoted).seconds > 11) return reply('الوقت الأقصى المسموح به هو 10ثواني فقط❄🎬!')
  let media = await quoted.download()
  let encmedia = await Miku.sendVideoAsSticker(m.chat, media, m, { packname: global.packname, author: global.author })
  await fs.unlinkSync(encmedia)
  } else {
- reply(`Send Image/Video With Caption ${prefix + command}\nVideo Duration 1-9 Seconds`)
+ reply(`❄*أرسل صوره أو فيديو وقم برد عليه وكتابة الأمر فقط*❄ ${prefix + command}\n❄*يسمح بمدة الفيديو من 1 ثانية إلى 10ثواني فقط*❄`)
  }
  }
  break
