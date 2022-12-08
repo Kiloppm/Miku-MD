@@ -3528,7 +3528,7 @@ break
 
 
 
-case 'smeme': case 'ملصق': case 'stickmeme': {
+case 'smeme': case 'كتابة': case 'اكتب': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 let { TelegraPh } = require('./lib/uploader')
