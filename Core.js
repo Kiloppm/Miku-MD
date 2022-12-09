@@ -4097,7 +4097,7 @@ break
 
 
 
-case 'crossplay': case 'crosplay': case 'cosplay':
+case 'كوسبلاي': case 'crosplay': case 'كوسبلاي1':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4121,18 +4121,18 @@ case 'crossplay': case 'crosplay': case 'cosplay':
 
 
 
-case 'neko2':
+case 'نيكو2':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
 reply(mess.waiting)							
    waifud = await axios.get('https://waifu.pics/api/sfw/neko')
                 var wbutsss = [
-        {buttonId: `${prefix}neko2`, buttonText: {displayText: `>>`}, type: 1},
+        {buttonId: `${prefix}نيكو2`, buttonText: {displayText: `>>`}, type: 1},
         ]
       let buttonssMessage = {
        image: {url:waifud.data.url},
-       caption:  `Here it is...`,
+       caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
       footer: `${global.BotName}`,
       buttons: wbutsss,
       headerType: 4
@@ -4144,7 +4144,7 @@ reply(mess.waiting)
 
 
 
-case 'feed':
+case 'فيد':
 case 'meow':
 case 'tickle':
     if (isBan) return reply(mess.banned)	 			
@@ -4157,7 +4157,7 @@ reply(mess.waiting)
         ]
       let buttonssMessages = {
        image: {url:waifudd.data.url},
-       caption:  `Here it is...`,
+       caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
       footer: `${global.BotName}`,
       buttons: wbuttsss,
       headerType: 4
