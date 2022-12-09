@@ -4735,92 +4735,267 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
+ const helpmenu = ` 
+⚜︎══⊹⊱ «❄️» ⊰⊹══⚜︎
 
-I am *Miku Nakano*, a bot developed by *Fantox*.
+*أوهايو *${pushname}* سينباي*🤍❄️
 
-🔰 My prefix is:  ${prefix}
+أن *نيرو*، البوتة التي صنعها دابي دونو من أجل المتعة 💤❄️
 
-Here's the list of my Commands.
+*هاهي قائمة الأوامر الخاصة بي⛩️ :*
 
+❄️━──━•⌬ *〔🧙🏻‍♀️قائمة المغامرين🧙🏻‍♂️〕*⌬•━──━❄️
 
+♡┃ - بروفايل 
+♤┃ يعرض معلوماتك
+
+♡┃ - سوالف نيرو
+♤┃ تسولف مع بوت
+
+♡┃ - خلفيه
+♤┃ يجيب لك خلفية لأي انمي
+
+♡┃ - المطور 
+♤┃ يعطيك صاحب 
+
+♡┃ - نيرو 
+♤┃ يجيب لك الاوامر للبوت 
+
+♡┃ - الدعم 
+♤┃ عرض الدعم 
+
+♡┃ - التسجيل 
+♤┃ روابط الجروب 
+
+♡┃ - الاوامر 
+♤┃ يعرض لك قائمة الاوامر 
+
+♡┃ - تطقيم 
+♤┃ تطقيمات عشوائية 
+
+❄️━━━━━⌬ *〔🍻 قائمة المؤسس🍻〕*⌬━━━━━❄️
+
+ ♡┃ - بان 
+ ♤┃ الكروب من البوت 
+
+ ♡┃ - حظر 
+ ♤┃ البوت من المزعجين 
+
+ ♡┃ - خاص 
+ ♤┃ البوت خاص فقط لمؤسس 
+
+ ♡┃ - عام 
+ ♤┃ جعل البوت عام للجميع 
+
+♡┃ - بلوك 
+♤┃ حظر عضو من خاص عند البوت 
+
+♡┃ - فك-البلوك 
+♤┃ الغاء البلوك عن العضو  
+
+♡┃ - اخرج 
+♤┃ خروج البوت من كروب 
+
+♡┃ - انضم 
+♤┃ دخول بوت للكروب 
+
+♡┃ - شير 
+♤┃ نشر رسالة في كل كروبات 
+
+♡┃ - مستوى 
+♤┃ يرفع مستوى عضو 
+
+❄️━━━━━⌬ *〔🎞️ قائمة التنزيلات🎞️〕*⌬━━━━━❄️
+
+♡┃ - فيسبوك 
+♤┃ تنزيل من الفايسبوك 
+
+♡┃ - تويتر 
+♤┃ تنزيل من التويتر 
+
+♡┃ - انستجرام 
+♤┃ تنزيل من انستجرام 
+
+♡┃ - تيكتوك 
+♤┃ تحميل من تيكتوك 
+
+♡┃ - ميديافاير 
+♤┃  من ميدافاير 
+
+❄️━━━━━━  *〔⚔️قائمة المشرفين⚔️〕*  ⌬━━━━━❄️
+
+♡┃ - طرد 
+♤┃ طرد العضو 
+
+♡┃ - منشن 
+♤┃ منشن جماعي 
+
+♡┃ - مخفي 
+♤┃ منشن مخفي 
+
+♡┃ - حذف 
+♤┃ حذف رسالة البوت 
+
+♡┃ - الروابط 
+♤┃ تفعيل وضع منع الروابط 
+
+♡┃ - جروب 
+♤┃ فتح وإغلاق الكروب 
+
+♡┃ - تغيرالبايو 
+♤┃ تغير بايو الكروب 
+
+ ♡┃ - تغيرالصوره 
+ ♤┃ تغير صوره الكروب 
+
+ ♡┃ - اضافه
+ ♤┃ اضافة عضو للمجموعة 
+
+ ♡┃ - اعدادات 
+ ♤┃ معلومات الكروب 
+
+ ♡┃ - رفع 
+ ♤┃ العضو لمشرف 
+
+ ♡┃ - اقاله 
+ ♤┃ ازالة إشراف 
+
+❄️━━━━━⌬ *〔 🎮قائمة العاب🎮〕*⌬━━━━━❄️
+
+ ♡┃ - زواج 
+ ♤┃ إثنين عشوائي 
+
+ ♡┃ - غبي 
+ ♤┃ يجيب لك شخص غبي
+
+ ♡┃ - ذكي 
+ ♤┃ يجيب لك شخص ذكي
+
+ ♡┃ - زوجني
+ ♤┃ يختار لك زوج/ه عشوائى 
+
+ ♡┃ - حمار 
+ ♤┃ يختار لك حمار من الاعضاء 
+
+ ♡┃ - رجال 
+ ♤┃ يختار أعضاء عشوائى 
+
+ ♡┃ - حزين 
+ ♤┃ يختار لك حزين من الاعضاء 
+
+ ♡┃ - كلب 
+ ♤┃ يختار لك كلب من الاعضاء 
+
+ ♡┃ - قوي 
+ ♤┃ يختار لك عضو قوي 
+
+ ♡┃ - ضعيف 
+ ♤┃ يختار لك عضو ضعيف 
+
+ ♡┃ - طلاق 
+ ♤┃ يطلق إثنين عشوائي 
+
+ ♡┃ - رفيق  
+ ♤┃ يجيب لك توأم روحك 
+
+ ♡┃ - فراق 
+ ♤┃ إثنين عشوائي 
+
+ ♡┃ - شخصيتك 
+ ♤┃ يجيب لك شخصية شخص 
+
+ ♡┃ - نسبة-حبك 
+ ♤┃ نسبة حب شخص لك 
+
+ ♡┃ - نسبة جمالك 
+ ♤┃  نسبة جمال شخص 
+
+ ♡┃ - مهنتك 
+ ♤┃ مهنتك المستقبلية 
+
+♡┃ - غني
+♤┃ يجيب لك أغنى شخص في كروب
+
+♡┃ - فقير
+♤┃ يجيب لك شخص فقير
+
+♡┃ - لطيف
+♤┃ يجيب لك شخص لطيف
+
+♡┃ - صغير
+♤┃ يجيب لك شخص صغير
+
+♡┃ - محد يعرفو
+♤┃ يجيب لك شخص محد يعرفو
+
+♡┃ - مشهور
+♤┃ يجيب لك شخص مشهور
+
+♡┃ - هادي
+♤┃ يجيب لك شخص هادي
+
+♡┃ - الاكبر
+♤┃ يجيب لك شخص كبير
+
+♡┃ - جميل
+♤┃ يجيب لك شخص جميل
+
+ ♡┃- اختفاء 
+ ♤┃ ترك سبب ذهابك 
+
+❄️━━━━━⌬ *〔📡 قائمة تحويلات📡〕* ⌬━━━━━❄️
+
+ ♡┃- ملصق 
+ ♤┃ تحويل فيديو أو صوره لملصق 
+
+ ♡┃- سرقه 
+ ♤┃ سرقة ملصق وارجعاه بحقوقك 
+
+ ♡┃- ايموجي 
+ ♤┃ .تحويل ايموجي إلى صوره 
+
+ ♡┃ - لصوره 
+ ♤┃  ملصق لصوره 
+
+ ♡┃- لفيديو 
+ ♤┃ تحويل ملصق متحرك لفيديو 
+
+ ♡┃ - لصوتي 
+ ♤┃ تحويل فيديو لصوت 
+
+ ♡┃ - اكتب 
+ ♤┃ يكتب لك على ملصق 
+
+❄️━──━•⌬ *〔🔍قائمة البحث🔎〕*⌬•━──━❄️
+
+  ♡┃ - اغنية
+  ♤┃  البحث عن اغنية 
+
+  ♡┃ - فيلم 
+  ♤┃ البحث عن معلومات فلم 
  
- *━━━〈  🎆 Core 🎆  〉━━━*
-
-speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script, admin 
+  ♡┃ - انمي 
+  ♤┃  البحث عن خلفية انمي 
  
- *━━━〈  🎀 Owner 🎀  〉━━━*
+  ♡┃  - صوره 
+  ♤┃ البحث عن صور عشوائية 
 
-self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
-
- *━━━〈  ⭕ Group ⭕  〉━━━*
+  ♡┃  - بحث 
+  ♤┃ بحث في اليوتيوب بالرابط 
  
-promote, demote, revoke, add, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
-
- *━━━〈  ➰ Anti Link ➰  〉━━━*
+  ♡┃ - جوجل 
+  ♤┃ يجيب لك من غوغل
  
-antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
+⚜︎══⊹⊱ «❄️» ⊰⊹══⚜︎
+*⚡ مَا يَلْفِظُ مِنْ قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ 🕊️⚡*
 
- *━━━〈  🔍 Search 🔍  〉━━━*
+*قبل كل أمر سوي { - } عشان تشتغل معك بوتة❄️🤍*
 
-play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
-
- *━━━〈  🔰 Convert 🔰  〉━━━*
-
-sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toaudio
-
- *━━━〈  🔉 Audio 🔉  〉━━━*
-
-bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, squirrel
-
- *━━━〈  📍 Reactions 📍  〉━━━*
-
-bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
-
- *━━━〈  🌌 Downloader 🌌  〉━━━*
-
-play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
-
- *━━━〈  🈴 Weeb 🈴  〉━━━*
-
-crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
-
- *━━━〈  ♨️ Informative ♨️  〉━━━*
-
-animequote, quote, covid, earthquake, wiki
-
- *━━━〈  🎗 Others 🎗  〉━━━*
-
-stickermeme, quotes, darkjoke 
-
- *━━━〈  🎐 Fun 🎐  〉━━━*
-
-reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
-
- *━━━〈  🪁 Essentials 🪁  〉━━━*
-
-qr, say, translate, fliptext, toletter, weather
-
- *━━━〈  💥 NSFW 💥  〉━━━*
-
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
-
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
-
-
-
+*⚡ثم أتمنى وأطلب ﷲ أن يعجبكم البوت وأن ينال إعجابكم وأستمحكم وأترككم من أجل أن تستمتعو بكل شيء وإلا القاء🤍🕊️.*
 
  『  *${global.BotName}*  』
- Powered by: *Fantox*
-
- 🔰 To use any of these commands type 
- " *${prefix}<Command name>* ".
+ *تم تطويره بواسطة: *دابي`
  
- 🔰 To get Support Group link type " *${prefix}support* ".
-
- 🔰 Type " *${prefix}help* " to get full command list.`
-    
-
  let buttonshelpm = [
     {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور'}, type: 1}
     ]
@@ -4845,10 +5020,10 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
+ const needhelpmenu = `〘❄*مرحبا بك في بوتة نيرو أقوى بوتة عربية نورتني ادا أردت الأوامر ${prefix} أكتب {نيرو تشان} ولا تنسى علامة*❄〙`
      
          let butRun = [
-                {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
+                {buttonId: `${prefix}help`, buttonText: {displayText: '❄*نيرو تشان*❄'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
@@ -4863,11 +5038,11 @@ break
 
 
 
-case 'miku':
+case 'بوتة': case 'نيرو الحلوة':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `Do you love Miku? Then we are the same.`
+const txt = `❄*عيوني منور منور*❄`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
@@ -4910,21 +5085,21 @@ const mikuarray= [
 
 break
 
-case 'add':{     			
+case 'add': case 'اضافه': {     			
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
- if (users.length == 0) return replay(`Please write the number of the person you want to add to thhis group`)
-  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`User Added Successfully!`)).catch((err) => replay(`Cannot add that user to this group!`))
+ if (users.length == 0) return replay(`*يرجى كتابة رقم شخص الذي تريد إضافته إلى هذه مجموعة*`)
+  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`*تمت اضافه المستخدم بنجاح*!`)).catch((err) => replay(`Cannot add that user to this group!`))
  }
  break
 
 
- case "tts":  case "texttospeech":  case "say": case "speak":{
+ case "tts":  case "انطق":  case "قول": case "speak":{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-    if (!args[0]) return reply("Please give me a text so that i can speak it!")
+    if (!args[0]) return reply("*أكتب اي شي انغليزي وسوف أنطقه!")
       
       let texttosay = text
         ? text
@@ -4938,18 +5113,18 @@ case 'add':{
     break;
 
 
-    case 'qr': case 'qrcode':
+    case 'qr': case 'باركود':
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         if (!m.isGroup) return replay(mess.grouponly)
-    reply(`Running repl....Please wait until repl.it responds...`)						
+    reply(`يجري إعادة التشغيل.......انتضر حتا يستجيب.`)						
     var replqr =  await getBuffer(`https://miku-qr--fantox001.repl.co/`)
                                var qrbutton = [
-            {buttonId: `${prefix}qr`, buttonText: {displayText: `Re-run Repl`}, type: 1}
+            {buttonId: `${prefix}qr`, buttonText: {displayText: `باركود جديد`}, type: 1}
             ]
           let bmffg = {
            image: replqr,
-           caption:  `Scan the qr within 10-15 seconds...`,
+           caption:  `قم بمسح باركود خلال 10-15 تانية...`,
           footer: `${global.BotName}`,
           buttons: qrbutton,
           headerType: 4
