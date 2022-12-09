@@ -5022,7 +5022,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
+ const needhelpmenu = `❄*{ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب  {-الاوامر *${prefix}* ولا تنسى وضع*❄.`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: '❄*نيرو تشان*❄'}, type: 1}
