@@ -4692,7 +4692,7 @@ teks = "\nDarkjokes"
 Miku.sendMessage(m.chat, { image : { url : res }, caption: teks }, { quoted : m })
 break
 
-case 'leavegc': case 'leavegroup': case 'bye': {
+case 'غادر': case 'اخرج': case 'bye': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4703,35 +4703,35 @@ case 'leavegc': case 'leavegroup': case 'bye': {
                 break
 
 
-case 'bc': case 'broadcast': case 'bcall': {
+case 'bc': case 'شير': case 'bcall': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 if (!isCreator) return replay(mess.botowner)
-if (!args.join(" ")) return replay(`Please enter some text to broadcast! \n\nExample : ${prefix + command} ${global.OwnerName}`)
+if (!args.join(" ")) return replay(`الرجاء ادخال نص بث! \n\nمثال : ${prefix + command} ${global.OwnerName}`)
 let anu = await store.chats.all().map(v => v.id)
-replay(`Send Broadcast To ${anu.length} Chat\nTime's up ${anu.length * 1.5} second`)
+replay(`إرسال بحث الى ${anu.length} شات\nانتهى الوقت ${anu.length * 1.5} ثواني`)
 for (let yoi of anu) {
 await sleep(1500)
 let btn = [{
 quickReplyButton: {
-displayText: '✨Menu✨',
+displayText: '✨القائمه✨',
 id: '-menu'
 }  
 }, {
 quickReplyButton: {
-displayText: 'Bot Owner',
+displayText: 'المطور❄',
 id: '-owner'
 }
 }]
-let txt = `「 *${global.OwnerName}'s Broadcast* 」\n\n${text}`
+let txt = `「 *${global.OwnerName}'*شير الكل* 」\n\n${text}`
 Miku.send5ButImg(yoi, txt, `${global.BotName}`, BotLogo, btn, Thumb)
 }
-replay('Broadcast Sent !')
+replay('*تم ارسال البحث بي نجاح* !')
 }
 break    
 
 
-case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
+case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': case 'نيرو': case 'نيرو تشان': case 'القائمه':  {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
@@ -4822,7 +4822,7 @@ qr, say, translate, fliptext, toletter, weather
     
 
  let buttonshelpm = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور'}, type: 1}
     ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
