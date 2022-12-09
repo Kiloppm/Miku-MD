@@ -4054,7 +4054,7 @@ reply(mess.waiting)
                 })
 break   
 
-case 'animenom' :
+case 'نوم' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
@@ -4065,7 +4065,7 @@ reply(mess.waiting)
     ]
   let xx1button3Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
   buttons: xxhnekobot,
   headerType: 1
   }      
@@ -4440,7 +4440,7 @@ var wbutsss = [
          ]
       let buttonzMessage = {
       image: {url:ud.data.url},
-       caption:  `Here it is...`,
+       caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
       footer: `${global.BotName}`,
           buttons: wbutsss,
      headerType: 4
@@ -4461,7 +4461,7 @@ case 'awoo':
     ]
   let button1Messages = {
    image: {url:waifudd.data.url},
-   caption:  `Here it is...`,
+   caption:  `*تم تجهيز طلبك سيدي/تي..🤍*`,
    footer: `${global.BotName}`,
   buttons: wbuttsss,
   headerType: 2
@@ -4502,54 +4502,54 @@ var walb = [
 break
 
 
-case 'anime':
+case 'anime': case 'انمي':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
-	    if(!q) return reply(`Please proide a search term!\n\n*Example:* ${prefix}anime naruto`)
+	    if(!q) return reply(`تكتب الأمر ويليه أسم المانغا!\n\n*مثال:* ${prefix}anime naruto`)
 reply(mess.waiting)							
 const { Anime } =require("@shineiichijo/marika")
     const client = new Anime();
      let anime = await client.searchAnime(q)
     let result = anime.data[0];
     console.log(result)
-   let details = `*Title:* ${result.title}\n`;
-    details += `*Format:* ${result.type}\n`;
-    details += `*Status:* ${result.status.toUpperCase().replace(/\_/g, " ")}\n`;
-    details += `*Total episodes:* ${result.episodes}\n`;
-    details += `*Duration:* ${result.duration}\n`;
-    details += `*Genres:*\n`;
+   let details = `*العنوان:* ${result.title}\n`;
+    details += `*شكل:* ${result.type}\n`;
+    details += `*الحاله:* ${result.status.toUpperCase().replace(/\_/g, " ")}\n`;
+    details += `*مجموع الحلقات:* ${result.episodes}\n`;
+    details += `*المده:* ${result.duration}\n`;
+    details += `*الانواع:*\n`;
     for (let i = 0; i < result.genres.length; i++) {
       details += `\t\t\t\t\t\t\t\t${result.genres[i].name}\n`;
     }
-    details += `*Based on:* ${result.source.toUpperCase()}\n`;
-    details += `*Studios:*\n`;
+    details += `*مرتكز على:* ${result.source.toUpperCase()}\n`;
+    details += `*استوديوهات:*\n`;
     for (let i = 0; i < result.studios.length; i++) {
       details += `\t\t\t\t\t\t\t\t${result.studios[i].name}\n`;
     }
-    details += `*Producers:*\n`;
+    details += `*منتجين:*\n`;
     for (let i = 0; i < result.producers.length; i++) {
       details += `\t\t\t\t\t\t\t\t\t\t${result.producers[i].name}\n`;
     }
-    details += `*Premiered on:* ${result.aired.from}\n`;
-    details += `*Ended on:* ${result.aired.to}\n`;
-    details += `*Popularity:* ${result.popularity}\n`;
-    details += `*Favorites:* ${result.favorites}\n`;
+    details += `*انتهى في:* ${result.aired.from}\n`;
+    details += `*شعبية:* ${result.aired.to}\n`;
+    details += `*المفضلة:* ${result.popularity}\n`;
+    details += `*التقيم:* ${result.favorites}\n`;
     details += `*Rating:* ${result.rating}\n`;
-    details += `*Rank:* ${result.rank}\n\n`;
+    details += `*مرتبة:* ${result.rank}\n\n`;
     if (result.trailer.url !== null)
-      details += `*Trailer:* ${result.trailer.url}\n\n`;
-    details += `*URL:* ${result.url}\n\n`;
+      details += `*جدار:* ${result.trailer.url}\n\n`;
+    details += `*الرابط:* ${result.url}\n\n`;
     if (result.background !== null)
-      details += `*Background:* ${result.background}\n\n`;
-    details += `*Description:* ${result.synopsis.replace(
+      details += `*خلفية:* ${result.background}\n\n`;
+    details += `*الوصف:* ${result.synopsis.replace(
       /\[Written by MAL Rewrite]/g,
       ""
     )}`
 Miku.sendMessage(m.chat,{image:{url:result.images.jpg.large_image_url},caption:details},{quoted:m})   
 break
 
-case 'manga':
+case 'manga': case 'مانغا':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
