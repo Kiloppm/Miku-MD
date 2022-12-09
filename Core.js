@@ -4586,18 +4586,18 @@ break
 
 
 
-case 'waifu' :
+case 'وايفي' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/waifu')
  var wbuttsssr = [
-    {buttonId: `${prefix}waifu`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}وايفي`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let button4Messagess = {
         image: {url:waifuddd.data.url},
-        caption: 'More than one waifu will definitely ruin your Laifu!',
+        caption: '*تم تجهيز طلبك سيدي/تي..🤍*',
         buttons: wbuttsssr,
         headerType: 4
          }     
@@ -4607,18 +4607,18 @@ reply(mess.waiting)
         })
 break
 
-case 'neko' :
+case 'نيكو' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/neko')
  var wbuttsssr = [
-    {buttonId: `${prefix}neko`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}نيكو`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let buttonMessagessf = {
         image: {url:waifuddd.data.url},
-        caption: 'Nyaa...',
+        caption: '*تم تجهيز طلبك سيدي/تي..🤍*',
         buttons: wbuttsssr,
         headerType: 2
          }     
@@ -4629,18 +4629,18 @@ reply(mess.waiting)
 break
 
 
-case 'loli' :
+case 'لولي' :
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
     if (!m.isGroup) return replay(mess.grouponly)
 reply(mess.waiting)	
     waifuddd = await axios.get('https://waifu.pics/api/sfw/shinobu')
  var wbuttsssr = [
-    {buttonId: `${prefix}loli`, buttonText: {displayText: `>>`}, type: 1},
+    {buttonId: `${prefix}لولي`, buttonText: {displayText: `>>`}, type: 1},
     ]
         let buttonMessagessfgr = {
         image: {url:waifuddd.data.url},
-        caption: 'Dont be a lolicon !',
+        caption: '*تم تجهيز طلبك سيدي/تي..🤍*',
         buttons: wbuttsssr,
         headerType: 2
          }     
