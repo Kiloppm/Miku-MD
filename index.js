@@ -150,9 +150,9 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-Hello @${WAuserName.split("@")[0]},
+هلا @${WAuserName.split("@")[0]},
 
-I am *Miku Nakano*, Welcome to ${metadata.subject}.
+ هلا في *❄ان البوتة *❄نيرو النسخة تجريبية,  ${metadata.subject}.
 
 *Group Description:*
 ${metadata.desc}
@@ -169,7 +169,8 @@ Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
                     mikutext = `
-Sayonara 👋, @${WAuserName.split("@")[0]},
+أتمنى لك أيام سعيدة وأنك ستمتعت في مجموعة
+,وأن تعود لنا بسلامة وأن يحفظك لله طريق سلامة🎻🤍 , @${WAuserName.split("@")[0]},
 
 I hope you will come back soon, but we are not going to miss you though!
 `
