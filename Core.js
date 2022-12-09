@@ -1888,7 +1888,7 @@ await Miku.sendMessage(m.chat, { delete: key })
  }
  }
 
-   case 'المستوى':case 'leveling':
+   case 'المستوى': case 'leveling':
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -4731,7 +4731,7 @@ replay('*تم ارسال البحث بي نجاح* !')
 break    
 
 
-case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': case 'نيرو': case 'نيرو تشان': case 'القائمه':  {
+case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': case 'نيرو': case 'نيرو تشان': case 'القائمه': case 'القائمة': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
@@ -4992,11 +4992,13 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 *قبل كل أمر سوي { - } عشان تشتغل معك بوتة❄️🤍*
 
 *⚡ثم أتمنى وأطلب ﷲ أن يعجبكم البوت وأن ينال إعجابكم وأستمحكم وأترككم من أجل أن تستمتعو بكل شيء وإلا القاء🤍🕊️.*
+ 
 
  『  *${global.BotName}*  』
- *تم تطويره بواسطة: *دابي`
+   *تم تطوير بواسطه: *جوزو`
  
- let buttonshelpm = [
+let buttonshelpm = [
+	
     {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور'}, type: 1}
     ]
                 let buttonMessage = {
@@ -5020,7 +5022,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `〘❄*مرحبا بك في بوتة نيرو أقوى بوتة عربية نورتني ادا أردت الأوامر ${prefix} أكتب {نيرو تشان} ولا تنسى علامة*❄〙`
+ const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: '❄*نيرو تشان*❄'}, type: 1}
@@ -5038,11 +5040,11 @@ break
 
 
 
-case 'بوتة': case 'نيرو الحلوة':
+case 'نيرو':case 'الإمبراطورة':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = `❄*عيوني منور منور*❄`
+const txt = ` تحبها نيرو البوتة تحبك هل انت تحبها.`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
@@ -5089,8 +5091,8 @@ case 'add': case 'اضافه': {
     if (!m.isGroup) return replay(mess.grouponly)
  if (!isBotAdmins) return replay(mess.botadmin)
  let users = m.quoted ? m.quoted.sender : text.replace(/[^0-9]/g, '')+'@s.whatsapp.net'
- if (users.length == 0) return replay(`*يرجى كتابة رقم شخص الذي تريد إضافته إلى هذه مجموعة*`)
-  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`*تمت اضافه المستخدم بنجاح*!`)).catch((err) => replay(`Cannot add that user to this group!`))
+ if (users.length == 0) return replay(`*يرجى كتابة رقم شخص الذي تريد إضافته إلى مجموعة*`)
+  await Miku.groupParticipantsUpdate(m.chat, [users], 'add').then((res) => replay(`*تمت اضافة المستخدم بنجاح*!`)).catch((err) => replay(`Cannot add that user to this group!`))
  }
  break
 
@@ -5099,7 +5101,7 @@ case 'add': case 'اضافه': {
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-    if (!args[0]) return reply("*أكتب اي شي انغليزي وسوف أنطقه!")
+    if (!args[0]) return reply("*من فضلك اكتب أي شي انغليزي وسوف أنطقه*!")
       
       let texttosay = text
         ? text
@@ -5117,14 +5119,14 @@ case 'add': case 'اضافه': {
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         if (!m.isGroup) return replay(mess.grouponly)
-    reply(`يجري إعادة التشغيل.......انتضر حتا يستجيب.`)						
+    reply(`جاري إعادة تشغيل يرجى انتصار....`)						
     var replqr =  await getBuffer(`https://miku-qr--fantox001.repl.co/`)
                                var qrbutton = [
             {buttonId: `${prefix}qr`, buttonText: {displayText: `باركود جديد`}, type: 1}
             ]
           let bmffg = {
            image: replqr,
-           caption:  `قم بمسح باركود خلال 10-15 تانية...`,
+           caption:  `من فضلك صور كود خلال 10-15 تانية...`,
           footer: `${global.BotName}`,
           buttons: qrbutton,
           headerType: 4
@@ -5150,7 +5152,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`No such command programmed *${pushname}* senpai! Type *${prefix}help* to get my full command list!`)
+        reply (`*لا يوجد أمر مبرمج مثل هاذا *${pushname}* أكتب *${prefix} الاوامر* للحصول على قائمة اوامر خاصة بي-* !`)
 
     }	 			
 
