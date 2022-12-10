@@ -1493,7 +1493,7 @@ var mems = []
 members.map(async adm => {
 mems.push(adm.id.replace('c.us', 's.whatsapp.net'))
 })
-Miku.sendMessage(from, {text: `\`\`\`「 ملاحظة 」\`\`\`\n\nلقد تم منعي من هذه مجموعة لهاذا لا يمكنكم إستخدامي!`, : { mentionedJid : mems }}, {quoted:m})
+Miku.sendMessage(from, {text: `\`\`\`「 ملاحظة 」\`\`\`\n\nلقد تم منعي من هذه مجموعة لهاذا لا يمكنكم إستخدامي!`, contextInfo: { mentionedJid : mems }}, {quoted:m})
 } else if (args[0] === "off") {
 if (!isBanChat) return replay('*لقد تم منعي بفعل من هذه المجموعة❄️☃️*')
 let off = banchat.indexOf(from)
