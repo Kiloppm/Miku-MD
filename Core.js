@@ -4558,26 +4558,26 @@ const { Manga } =require("@shineiichijo/marika")
 const manga = new Manga();
 if(!q) return reply(`Please proide a search term!\n\n_Example:_ ${prefix}manga naruto`)
 let srh = await manga.searchManga(q)
-    let mang = `*Title:* ${srh.data[0].title}\n`;
-    mang += `*Status:* ${srh.data[0].status}\n`;
-    mang += `*Total Volumes:* ${srh.data[0].volumes}\n`;
-    mang += `*Total Chapters:* ${srh.data[0].chapters}\n`;
-    mang += `*Genres:*\n`;
+    let mang = `*عنوان:* ${srh.data[0].title}\n`;
+    mang += `*حالة :* ${srh.data[0].status}\n`;
+    mang += `*الأحجام الإجمالية :* ${srh.data[0].volumes}\n`;
+    mang += `*مجموع الفصول :* ${srh.data[0].chapters}\n`;
+    mang += `*الأنواع :*\n`;
     for (let i = 0; i < srh.data[0].genres.length; i++) {
       mang += `\t\t\t\t\t\t\t\t${srh.data[0].genres[i].name}\n`;
     }
-    mang += `*Published on:* ${srh.data[0].published.from}\n`;
-    mang += `*Score:* ${srh.data[0].scored}\n`;
-    mang += `*Popularity:* ${srh.data[0].popularity}\n`;
-    mang += `*Favorites:* ${srh.data[0].favorites}\n`;
-    mang += `*Authors:*\n`;
+    mang += `*نشرت في:* ${srh.data[0].published.from}\n`;
+    mang += `*نتيجة :* ${srh.data[0].scored}\n`;
+    mang += `*شعبية :* ${srh.data[0].popularity}\n`;
+    mang += `*المفضلة :* ${srh.data[0].favorites}\n`;
+    mang += `*المؤلفون :*\n`;
     for (let i = 0; i < srh.data[0].authors.length; i++) {
       mang += `\t\t\t\t\t\t\t\t\t${srh.data[0].authors[i].name} (${srh.data[0].authors[0].type})\n`;
     }
-    mang += `\n*URL:* ${srh.data[0].url}\n\n`;
+    mang += `\n*الرابط:* ${srh.data[0].url}\n\n`;
     if (srh.data[0].background !== null)
-      mang += `*Background:* ${srh.data[0].background}`;
-    mang += `*Description:* ${srh.data[0].synopsis.replace(
+      mang += `*خلفية :* ${srh.data[0].background}`;
+    mang += `*الوصف :* ${srh.data[0].synopsis.replace(
       /\[Written by MAL Rewrite]/g,
       ""
     )}`;
@@ -5022,7 +5022,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `❄*{ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب  {-الاوامر *${prefix}* ولا تنسى وضع*❄.`
+ const needhelpmenu = `*〘❄{ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب  {-الاوامر *${prefix}* ولا تنسى وضع*❄〙* .`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: '❄*نيرو تشان*❄'}, type: 1}
