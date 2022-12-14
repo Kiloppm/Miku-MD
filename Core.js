@@ -1466,7 +1466,7 @@ case 'بروفايل': case 'profile': case 'ان':
 
 
 let buttonspro = [
-    {buttonId: `${prefix}soulmate`, buttonText: {displayText: 'Your Soulmate'}, type: 1}
+    {buttonId: `${prefix}soulmate`, buttonText: {displayText: 'كن توام روحي❤🕊'}, type: 1}
     ]
             let buttonMessage = {
                 image: { url: pfp },
@@ -1592,7 +1592,7 @@ let buttons = [
         ]
         let buttonMessage = {
             image: {url:wallpaper[i].image},
-            caption: `*Search term:* ${q}`,
+            caption: `*موضوع البحث 🔎:* ${q}`,
             footer: `${BotName}`,
             buttons: buttons,
             headerType: 4
@@ -1780,7 +1780,7 @@ replay(`${getCase(q)}`)
 break
 
 
- case 'إيموجي': {
+ case 'ايموجي': {
     if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply('❄ *أين هو الإيموجي* ❄')
@@ -2435,7 +2435,7 @@ if (isBanChat) return reply(mess.bangc)
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!isAdmins && !isCreator) return replay(mess.useradmin)
- let teks = `「 _منشن جماعي_ 」
+ let teks = `「 ❤ *منشن جماعي* ❤ 」
   
  *الرساله : ${args.join(" ") ? args.join(" ") : 'لاتوجد رساله'}*\n\n`
  for (let mem of participants) {
@@ -2446,7 +2446,7 @@ if (isBanChat) return reply(mess.bangc)
  break
 
 
-case'admin': case'منشن الأدمن': case 'الأدمن': {
+case'الأدمن': case'منشن الأدمن': case 'الأدمن': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -2937,7 +2937,7 @@ case 'togif': case 'لمتحرك': case 'متحركه': {
  break
 
 
- case 'owner': case 'المالك': case 'mod': case 'المطور':{
+ case 'owner': case 'المالك': case 'mod': case 'المطور': case 'مطور': {
     Miku.sendContact(m.chat, global.Owner, m)
     }
     break
@@ -3330,7 +3330,7 @@ break
 
               
 
-case 'play': case 'أغنية': case 'song': case 'ytplay': {
+case 'أغنية': case 'اغني': case 'song': case 'ytplay': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  const YT=require('./lib/ytdlcore')
