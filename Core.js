@@ -2415,7 +2415,7 @@ if (isBanChat) return reply(mess.bangc)
  }
  break
 
- case 'setgrouppp': case 'تغير الصوره': case 'setgcpp': {
+ case 'setgrouppp': case 'تغير الصوره': case 'تغيرصوره': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
@@ -3626,7 +3626,431 @@ let buttons = [
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
 }
 break
+		
+case 'soulmate': case 'رجال': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `افخم رجال في العالم هوا
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '🤩', buttonText: { displayText: 'فخامه💪🤩' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+}
+break
+		
+case 'soulmate': case 'ذكي': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `  عبقري حق كروب🥸👏🏻
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '🧠🤓', buttonText: { displayText: 'صح🤓' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break
+ 
+case 'فارقني': case 'فراق': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = ` تم فراقكم 🙂💔
+@${me.split('@')[0]} 💔 @${jodoh.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '💔', buttonText: { displayText: 'فارقني 💔️' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+}
+break
 
+case 'soulmate': case 'هادي': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `  أكتر شخص هادي😴
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😴', buttonText: { displayText: 'صح👀' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break		
+		
+case 'soulmate': case 'الأكبر': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = ` أكبر شخص في كروب😏💪🏻
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😂', buttonText: { displayText: 'صح💪🏻' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break	
+
+case 'soulmate': case 'جميل': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `  الجميل حق كروب🌚💓
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '❤️🌚', buttonText: { displayText: 'صح😎💪🏻' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break	
+		
+case 'soulmate': case 'الفقير': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `  فقير حق الكروب💔😔
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😂', buttonText: { displayText: 'صح😂💔' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break
+		
+case 'soulmate': case 'الغني': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `  ملياردير الكروب💰🌚
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😎', buttonText: { displayText: 'صح💰' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break	
+
+case 'soulmate': case 'محب الاكل': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = ` أكتر شخص ياكل في كروب شوي وياكلني🙂💔
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😂💔', buttonText: { displayText: 'يب😂' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break	
+				
+case 'soulmate': case 'نيرو تشان ': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = ` عيونها أمرني ياحلو/ة❄️🌚
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '❤️☺️', buttonText: { displayText: 'أحبك نيرو تشان ❤️' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break	
+
+case 'soulmate': case 'مشهور': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `   مشهور الكروب هات صورة يالمشهور📸🌚
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😎', buttonText: { displayText: 'صح😎' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break
+		
+case 'soulmate': case 'فارس ': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `  فارس أحلامي أحبو😔💘
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '❤️🌚', buttonText: { displayText: 'يب👀❤️' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break
+
+case 'soulmate': case 'مشهور': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `   مشهور الكروب هات صورة يالمشهور📸🌚
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😎', buttonText: { displayText: 'صح😎' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break
+		
+case 'soulmate': case 'فارس ': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `  فارس أحلامي أحبو😔💘
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '❤️🌚', buttonText: { displayText: 'يب👀❤️' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break
+
+case 'صغير': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = ` أصغر شخص في كروب بزر😂🍼
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😂', buttonText: { displayText: 'صح😂💔' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break	
+		
+case 'soulmate': case 'لطيف': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = ` ألطف شخص في كروب😔❤️
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '❤️', buttonText: { displayText: 'صح😔❤️' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} ak
+
+case 'soulmate': case 'قوي': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `اشخص القوي🤩
+@${me.split('@')[0]} ❤️`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '🤩', buttonText: { displayText: 'يب💪' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+}
+break
+
+case 'soulmate': case 'حزين': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `شخص 😔 💔 حزين
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😔', buttonText: { displayText: 'مسكين😔' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+}
+break
+	
+case 'soulmate': case 'محد يعرفو': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = ` محد يعرفو مسكين😂💔 
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😂💔', buttonText: { displayText: 'يب😂' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+} 
+break
+
+case 'soulmate': case 'غبي': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `اغبي شخص في الجروب 😂
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😂', buttonText: { displayText: 'يب😂' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+}
+break
+
+case 'soulmate': case 'حمار': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let me = m.sender
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `اكبر حمار في الجروب هوا
+@${me.split('@')[0]}`
+let ments = [me, jodoh]
+let buttons = [
+{ buttonId: '😂', buttonText: { displayText: 'يب😂' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
+}
+break
+
+case 'كلب': case 'كلبه': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let orang = member[Math.floor(Math.random() * member.length)]
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `@${orang.split('@')[0]} 「 هذا اكبر كلب 💔 」◣
+「 لي يتفق يدوس زر😭😂 」◣`
+let menst = [orang, jodoh]
+let buttons = [
+{ buttonId: '「 يب😂 」◣', buttonText: { displayText: '「 يب😂 」◣' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
+}
+break
+
+case 'ضعيف': case 'ضعيفه': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let orang = member[Math.floor(Math.random() * member.length)]
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `@${orang.split('@')[0]}「اكبر ضعيف في الجروب 💔」◣ 
+「 لي يتفق يدوس زر😂😭 」◣`
+let menst = [orang, jodoh]
+let buttons = [
+{ buttonId: '「 يب😂 」◣', buttonText: { displayText: '「 يب😂 」◣' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
+}
+break
+		
+case 'طلقني': case 'طلاق': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let orang = member[Math.floor(Math.random() * member.length)]
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab = `@${orang.split('@')[0]} 「 معلش طلقناكم لأنكم لا تصلحون لبعض 🤡💔 」◣ @${jodoh.split('@')[0]}
+「 الي يشوفهم مش مناسبين لبعض زيي يضغط يب 🤡💔 」◣`
+let menst = [orang, jodoh]
+let buttons = [
+{ buttonId: '「 يب هم مش مناسبين لبعض 😔💔 」◣', buttonText: { displayText: '「 يب هم مش مناسبين لبعض 😔💔 」◣' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
+}
+break
+
+case 'زوجني': case 'نتزوج': {
+    if (isBan) return reply(mess.banned)
+    if (isBanChat) return reply(mess.bangc)
+if (!m.isGroup) return replay(`${mess.grouponly}`)
+let member = participants.map(u => u.id)
+let orang = member[Math.floor(Math.random() * member.length)]
+let jodoh = member[Math.floor(Math.random() * member.length)]
+let jawab =  `「خذ/ي لك هذا شوف/ي على جمال」◣ @${jodoh.split('@')[0]}
+「 اذا اعجبك إضغط ازر🤡 」◣`
+let menst = [orang, jodoh]
+let buttons = [
+{ buttonId: '「 تمام شكرا نيرو تشان💖🌚」◣', buttonText: { displayText: '「 تمام شكرا نيرو تشان💖🌚」◣' }, type: 1 }
+]
+await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: menst})
+}
+break
+		
 case 'نسبة-حبك':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
@@ -3666,7 +4090,7 @@ case 'شخصيتك':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 					if (!text) return replay(`❄*مثال, ❄*أعمل منشن لشخص : ${prefix + command} @gozo`)
-					const Mikutttt =['Compassionate','Generous','Grumpy','Forgiving','Obedient','Good','Simp','Kind-Hearted','patient','UwU','top, anyway','Helpful']
+					const Mikutttt =['فقير','غني','جميل','غبي','ذكي','مضحك','يحب ياكل','رجال','مسكين','اسطورة','على نياته','يضحك']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `❄*التحقق من الشخصية...*❄ : ${q}\n*الاجابة* : *${taky}*` }, { quoted: m })
 				     break
