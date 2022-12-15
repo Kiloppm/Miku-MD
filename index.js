@@ -27,8 +27,8 @@ console.log(color(figlet.textSync('Miku Bot MD', {
 		whitespaceBreak: true
         }), 'yellow'))
 
-console.log(color('\nHello, I am Fantox, the main developer of this bot.\n\nThanks for using: Miku Bot','aqua'))
-console.log(color('\nYou can follow me on GitHub: FantoX001','aqua'))
+console.log(color('\nمرحبًا ، أنا دابي ، المطور الرئيسي لهذا البوت.\n\nشكرًا لاستخدام: ❄️𝐍𝐞𝐫𝐨 𝐁𝐨𝐭❄️','aqua'))
+console.log(color('\nأفرح أشتغل البوت❄✅','aqua'))
 
     let { version, isLatest } = await fetchLatestBaileysVersion()
     const Miku = MikuConnect({
@@ -46,7 +46,7 @@ store.bind(Miku.ev)
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let pa7rick = await Miku.sendContact(callerId, global.owner)
-    Miku.sendMessage(callerId, { text: `Baka! You will be blocked automatically for calling me!`}, { quoted : pa7rick })
+    Miku.sendMessage(callerId, {`*أيها المغامر/ة سيتم حظر بسبب الإتصال بي* ❄✅!`}, { quoted : pa7rick })
     await sleep(8000)
     await Miku.updateBlockStatus(callerId, "block")
     }
@@ -77,9 +77,9 @@ Miku.ev.on('groups.update', async pea => {
        }
        let wm_fatih = { url : ppgc }
        if (pea[0].announce == true) {
-       Miku.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `${BotName}`, wm_fatih, [])
+       Miku.send5ButImg(pea[0].id, `❄ *تم إغلاق كروب يمكن الأدمن فقط إرسال رسائل* ❄!`, `${BotName}`, wm_fatih, [])
        } else if(pea[0].announce == false) {
-       Miku.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `${BotName}`, wm_fatih, [])
+       Miku.send5ButImg(pea[0].id, `❄ *تم فتح كروب لاكن يمكن لأن للجميع إرسال رسائل* ❄!`, `${BotName}`, wm_fatih, [])
        } else {
        Miku.send5ButImg(pea[0].id, `Group Subject has been updated to *${pea[0].subject}*`, `${BotName}`, wm_fatih, [])
      }
@@ -98,19 +98,19 @@ Miku.ev.on('groups.update', async pea => {
         if (pea[0].announce == true) {
         //Miku.send5ButImg(pea[0].id, `Grop has been *Closed!* Only *Admins* can send Messages!`, `Miku Bot`, wm_fatih, [])
 
-        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Closed!* Only *Admins* can send Messages!'})
+        Miku.sendMessage(m.chat, { image: wm_fatih, caption: '❄ *تم إغلاق كروب يمكن الأدمن فقط إرسال رسائل* ❄!`'})
         } else if(pea[0].announce == false) {
        // Miku.send5ButImg(pea[0].id, `Grop has been *Opened!* Now *Everyone* can send Messages!`, `Miku Bot`, wm_fatih, [])
-       Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Grop has been *Opened!* Now *Everyone* can send Messages!'})
+       Miku.sendMessage(m.chat, { image: wm_fatih, caption: '❄ *تم فتح كروب لاكن يمكن لأن للجميع إرسال رسائل* ❄!'})
         } else if (pea[0].restrict == true) {
         //Miku.send5ButImg(pea[0].id, `Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !`, `Miku Bot`, wm_fatih, [])
-        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Restricted*, Now only *Admins* can edit Group Info !'})
+        Miku.sendMessage(m.chat, { image: wm_fatih, caption: '❄ *تم تعديل على إعدادات المجموعة يمكن الأدمن فقط تعديل على إعدادات مجموعة* ❄ !'})
         } else if (pea[0].restrict == false) {
         //Miku.send5ButImg(pea[0].id, `Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !`, `Miku Bot`, wm_fatih, [])
-        Miku.sendMessage(m.chat, { image: wm_fatih, caption: 'Group Info modification has been *Un-Restricted*, Now only *Everyone* can edit Group Info !'})
+        Miku.sendMessage(m.chat, { image: wm_fatih, caption: '❄ *تم تعديل على إعدادات مجموعة يمكن للجميع تعديل على إعدادات مجموعة* ❄!'})
         } else {
         //Miku.send5ButImg(pea[0].id, `Group Subject has been uhanged To:\n\n*${pea[0].subject}*`, `Miku Bot`, wm_fatih, [])
-        mikutextddfq =`Group Subject has been updated To:\n\n*${pea[0].subject}*`
+        mikutextddfq =`❄ *تم تحديث اسم كروب الى* ❄:\n\n*${pea[0].subject}*`
         Miku.sendMessage(pea[0].id, { image: wm_fatih, caption: mikutextddfq})
       }
      })
@@ -154,7 +154,7 @@ Miku.ev.on('group-participants.update', async (anu) => {
 
  هلا في *❄ان البوتة *❄نيرو النسخة تجريبية,  ${metadata.subject}.
 
-*Group Description:*
+*أسم المجموعة❄❤:*
 ${metadata.desc}
 `
 
@@ -171,8 +171,6 @@ Miku.sendMessage(anu.id, buttonMessage)
                     mikutext = `
 أتمنى لك أيام سعيدة وأنك ستمتعت في مجموعة
 ,وأن تعود لنا بسلامة وأن يحفظك لله طريق سلامة🎻🤍 , @${WAuserName.split("@")[0]},
-
-I hope you will come back soon, but we are not going to miss you though!
 `
 
     let buttonMessage = {
