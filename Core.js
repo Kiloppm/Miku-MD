@@ -1509,9 +1509,32 @@ replay('*لقد تم رفع الحظر عن هذه المجموعة بنجاح �
   }
   break
 
-case 'support': case 'supportgc':
+case 'قائمه رد تلقائي': case 'supportgc':
     
-    reply(`*My developer's group:* http://gg.gg/MikuSupport`)
+    reply`*♡ اللَّـهِ الرَّحْــمَـٰنِ الرَّحِيــمِ ♡*
+
+*【❣︎━─━━⊹◦⊰❄️⊱◦⊹━━─━❣︎】*
+❥︎𝑊𝑒𝑙𝑜𝑐𝑜𝑚𝑒 𝑡𝑜 ➮♥︎
+ 
+*❄️ قــــائــــمــــة نـــــيـــرو رد تــلــقــائـي ❄️*
+
+【❣︎━─━━⊹◦⊰❄️⊱◦⊹━━─━❣︎】
+
+*☾︎☽︎┃❄️❯ ☜︎︎︎ كت /كتت*
+
+*☾︎☽︎┃❄️❯ ☜︎︎︎ لو خيروك* 
+
+*☾︎☽︎┃❄️❯ ☜︎︎︎ سس*
+
+*☾︎☽︎┃❄️❯ ☜︎︎︎ سوالف نيرو*
+
+*☾︎☽︎┃❄️❯ ☜︎︎︎ نيرو قيمي افتاري*
+
+*☾︎☽︎┃❄️❯ ☜︎︎︎ نيرو رياكشن*
+
+*【❣︎━─━━⊹◦⊰❄️⊱◦⊹━━─━❣︎】*
+
+*〘 و الـــى الـــلِـــقـــاء❄️🍻 〙*`
     break
 
 case 'repo': case 'botrepo':
@@ -4561,7 +4584,7 @@ break
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-case 'cry':  case 'handhold':{
+case 'بكاء':  case 'handhold':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4598,7 +4621,7 @@ console.log(musers)
 }
 break
 
-case 'nom':{
+case 'اكل':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4635,7 +4658,7 @@ console.log(musers)
 }
 break
 
-case 'hug':{
+case 'حضن':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4673,7 +4696,7 @@ console.log(musers)
 break
 
 
-case 'dance':{
+case 'رقص':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4710,10 +4733,10 @@ console.log(musers)
 }
 break
 
-case 'kill': case 'pat': case 'lick': case 'kiss': case 'bite':
-case 'bully': case 'bonk': case 'poke': case 'slap':
-case 'happy':
-case 'cuddle': case 'kick':{
+case 'قتل': case 'لطيف': case 'قبلة تشان': case 'قبلة': case 'bite':
+case 'تنمر': case 'bonk': case 'poke': case 'ضرب':
+case 'سعيد':
+case 'احضان': case 'طردي':{
 
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
@@ -4752,9 +4775,9 @@ break
 
 
 
-case 'yeet':
-case 'wink': case 'smile':
-case 'wave': case 'blush': case 'smug': case 'glomp':
+case 'دموي':
+case 'غمزة': case 'بتسامة':
+case 'اهلا': case 'انحراج': case 'ضحك': case 'حزن':
 case 'cringe': case 'highfive':{
 
     if (isBan) return reply(mess.banned)	 			
@@ -4819,7 +4842,7 @@ break
 
 
 
-case 'megumin':
+case 'ميغومين':
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(mess.grouponly)
@@ -5166,6 +5189,10 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 ♡┃ - الامبراطورة أو نيرو
 ♤┃ تعرف بوت هل شغال أو لا
 
+♡┃ - قائمه رد تلقائي
+♤┃ يعطيك قائمة رد تلقائي
+
+
 ❄️━━━━━⌬ *〔🍻 قائمة المؤسس🍻〕*⌬━━━━━❄️
 
  ♡┃ - بان 
@@ -5197,6 +5224,8 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 
 ♡┃ - مستوى 
 ♤┃ يرفع مستوى عضو 
+
+♡┃ - ميغومين
 
 ❄️━━━━━⌬ *〔🎞️ قائمة التنزيلات🎞️〕*⌬━━━━━❄️
 
@@ -5399,11 +5428,10 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
  
 let buttonshelpm = [
 	
-    {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور'}, type: 1},
+    {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور👤'}, type: 1},
 	
     {buttonId: `.help`, buttonText: {displayText: 'الاوامر🕊'}, type: 1},
-
-    {buttonId: `.nsfw on`, buttonText: {displayText: '⚡قائمه الدعم⚡'}, type: 1}
+    
     ]
    
                 let buttonMessage = {
