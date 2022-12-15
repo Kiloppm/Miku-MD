@@ -2451,7 +2451,7 @@ case'الأدمن': case'منشن الأدمن': case 'الأدمن': {
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!text) return replay(`❄*أكتب الأمر وبعدها رسالة من فضلك لك/ي*❄`)
- let teks = `*「 منشن الأدمن 」*
+ let teks = `*「 🔥منشن الأدمن🔥 」*
   
  *Message : ${text}*\n\n`
  for (let mem of groupAdmins) {
@@ -3600,7 +3600,7 @@ if (!m.isGroup) return replay(`${mess.grouponly}`)
 let member = participants.map(u => u.id)
 let orang = member[Math.floor(Math.random() * member.length)]
 let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `@${orang.split('@')[0]}*〘 معلش زوجناكم عشان تصلحو لبعض...💓👀 〙*@${jodoh.split('@')[0]}
+let jawab = `@${orang.split('@')[0]}〘 معلش زوجناكم عشان تصلحو لبعض...💓👀 〙@${jodoh.split('@')[0]}
 *〘 لي يشوفهم مناسبين لبعض زي يدوس يب😂💞 〙*`
 let menst = [orang, jodoh]
 let buttons = [
@@ -3780,7 +3780,7 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 } 
 break	
 				
-case 'soulmate': case 'نيرو تشان ': {
+case 'soulmate': case 'نيرو سان': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
@@ -3813,41 +3813,7 @@ let buttons = [
 await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
 } 
 break
-		
-case 'soulmate': case 'فارس ': {
-    if (isBan) return reply(mess.banned)
-    if (isBanChat) return reply(mess.bangc)
-if (!m.isGroup) return replay(`${mess.grouponly}`)
-let member = participants.map(u => u.id)
-let me = m.sender
-let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `  فارس أحلامي أحبو😔💘
-@${me.split('@')[0]}`
-let ments = [me, jodoh]
-let buttons = [
-{ buttonId: '❤️🌚', buttonText: { displayText: 'يب👀❤️' }, type: 1 }
-]
-await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
-} 
-break
-
-case 'soulmate': case 'مشهور': {
-    if (isBan) return reply(mess.banned)
-    if (isBanChat) return reply(mess.bangc)
-if (!m.isGroup) return replay(`${mess.grouponly}`)
-let member = participants.map(u => u.id)
-let me = m.sender
-let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `   مشهور الكروب هات صورة يالمشهور📸🌚
-@${me.split('@')[0]}`
-let ments = [me, jodoh]
-let buttons = [
-{ buttonId: '😎', buttonText: { displayText: 'صح😎' }, type: 1 }
-]
-await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
-} 
-break
-		
+				
 case 'soulmate': case 'فارس ': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
@@ -5162,7 +5128,7 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
  const helpmenu = ` 
 ⚜︎══⊹⊱ «❄️» ⊰⊹══⚜︎
 
-*أوهايو *${pushname}* سينباي*🤍❄️
+*أوهايو  ${pushname} سينباي*🤍❄️
 
 أن *نيرو*، البوتة التي صنعها دابي دونو من أجل المتعة 💤❄️
 
@@ -5196,6 +5162,9 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 
 ♡┃ - تطقيم 
 ♤┃ تطقيمات عشوائية 
+
+♡┃ - الامبراطورة أو نيرو
+♤┃ تعرف بوت هل شغال أو لا
 
 ❄️━━━━━⌬ *〔🍻 قائمة المؤسس🍻〕*⌬━━━━━❄️
 
@@ -5269,7 +5238,7 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 ♡┃ - تغيرالبايو 
 ♤┃ تغير بايو الكروب 
 
- ♡┃ - تغيرالصوره 
+ ♡┃ - تغيرصوره
  ♤┃ تغير صوره الكروب 
 
  ♡┃ - اضافه
@@ -5366,6 +5335,13 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 
  ♡┃- اختفاء 
  ♤┃ ترك سبب ذهابك 
+ 
+♡┃ - فارس
+♤┃ يجيب لك فارس احلام نيرو
+
+♡┃ - نيرو سان
+♤┃ نيرو تتكلم لك
+
 
 ❄️━━━━━⌬ *〔📡 قائمة تحويلات📡〕* ⌬━━━━━❄️
 
@@ -5451,7 +5427,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `*〘❄{ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب  {-الاوامر *${prefix}* ولا تنسى وضع*❄〙* .`
+ const needhelpmenu = `*〘❄ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب -الاوامر${prefix}ولا تنسى وضع*❄〙* .`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: '❄ نيرو الاوامر ❄'}, type: 1}
@@ -5473,7 +5449,7 @@ case 'نيرو':case 'الإمبراطورة':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-const txt = ` تحبها نيرو البوتة تحبك هل انت تحبها.`
+const txt = ` *منور/ة أن بوتة نيرو موجودة تفضل ماذا تريد من فضلك؟🌚❤*.`
 const mikuarray= [
             "https://c.tenor.com/SOeIW-QVZvoAAAPo/scared-the-quintessential-quintuplets.mp4",
             "https://c.tenor.com/FDe7lTs0xvMAAAPo/miku-nakano-nakano-miku.mp4",
@@ -5581,7 +5557,7 @@ default:
     if(isCmd){
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
-        reply (`*لا يوجد أمر مبرمج مثل هاذا *${pushname}* أكتب *${prefix} الاوامر* للحصول على قائمة اوامر خاصة بي-* !`)
+        reply (`*لا يوجد أمر مبرمج مثل هاذا ${pushname} أكتب *${prefix} الاوامر* للحصول على قائمة اوامر خاصة بي-* !`)
 
     }	 			
 
