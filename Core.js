@@ -5423,8 +5423,13 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
  
 let buttonshelpm = [
 	
-    {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور'}, type: 1}
+    {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور'}, type: 1},
+	
+    {buttonId: `.help`, buttonText: {displayText: 'الاوامر🕊'}, type: 1},
+
+    {buttonId: `.nsfw on`, buttonText: {displayText: '⚡قائمه الدعم⚡'}, type: 1}
     ]
+   
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
                     caption: helpmenu,
@@ -5449,7 +5454,7 @@ case '':
  const needhelpmenu = `*〘❄{ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب  {-الاوامر *${prefix}* ولا تنسى وضع*❄〙* .`
      
          let butRun = [
-                {buttonId: `${prefix}help`, buttonText: {displayText: '❄*نيرو تشان*❄'}, type: 1}
+                {buttonId: `${prefix}help`, buttonText: {displayText: '❄ نيرو الاوامر ❄'}, type: 1}
                 ]
                 let buttonMessage = {
                     video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
