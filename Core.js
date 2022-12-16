@@ -2474,9 +2474,9 @@ case'الأدمن': case'منشن الأدمن': case 'الأدمن': {
  if (isBanChat) return reply(mess.bangc)
  if (!m.isGroup) return replay(mess.grouponly)
  if (!text) return replay(`❄*أكتب الأمر وبعدها رسالة من فضلك لك/ي*❄`)
- let teks = `*「 🔥منشن الأدمن🔥 」*
+ let teks = `*「 ⚡ منشن الأدمن ⚡ 」*
   
- *Message : ${text}*\n\n`
+ *الرسالة : ${text}*\n\n`
  for (let mem of groupAdmins) {
  teks += `🤴 @${mem.split('@')[0]}\n`
  }
