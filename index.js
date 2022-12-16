@@ -46,7 +46,7 @@ store.bind(Miku.ev)
     const callerId = json.content[0].attrs['call-creator']
     if (json.content[0].tag == 'offer') {
     let pa7rick = await Miku.sendContact(callerId, global.owner)
-    Miku.sendMessage(callerId, {`text: *أيها المغامر/ة سيتم حظر بسبب الإتصال بي* ❄✅!`}, { quoted : pa7rick })
+    Miku.sendMessage(callerId, { text: `*أيها المغامر/ة سيتم حظر بسبب الإتصال بي* ❄✅!`}, { quoted : pa7rick })
     await sleep(8000)
     await Miku.updateBlockStatus(callerId, "block")
     }
