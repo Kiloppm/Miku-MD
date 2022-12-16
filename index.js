@@ -27,7 +27,7 @@ console.log(color(figlet.textSync('Miku Bot MD', {
 		whitespaceBreak: true
         }), 'yellow'))
 
-console.log(color('\nمرحبًا ، أنا دابي ، المطور الرئيسي لهذا البوت.\n\nشكرًا لاستخدام: ❄️𝐍𝐞𝐫𝐨 𝐁𝐨𝐭❄️','aqua'))
+console.log(color('\nمرحبًا ، أنا دابي ، المطور الرئيسي لهاذا البوت.\n\nشكرًا لاستخدام: ❄️𝐍𝐞𝐫𝐨 𝐁𝐨𝐭❄️','aqua'))
 console.log(color('\nأفرح أشتغل البوت❄✅','aqua'))
 
     let { version, isLatest } = await fetchLatestBaileysVersion()
