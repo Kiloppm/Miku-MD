@@ -1461,7 +1461,7 @@ case 'بروفايل': case 'profile': case 'ان':
       pfp ='https://wallpapercave.com/wp/wp10524580.jpg'
     }
 
-     const profilexx = `*「 *صورتك/ي جميلة*🤍❄️ 」*\n\n*المنشن* : ${pushname}\n*البايو* : ${bioo}\n*حالتك في نقابة* : ${adn}\n*لفل* : ${levelMenu}\n*الإكس بي* : ${xpMenu} *مستمر الى* ${reqXp}\n*المستوى* : ${role}`
+     const profilexx = `*「 صورتك/ي جميلة🤍❄️ 」 *\n\n*المنشن* : ${pushname}\n*البايو* : ${bioo}\n*حالتك في نقابة* : ${adn}\n*لفل* : ${levelMenu}\n*الإكس بي* : ${xpMenu} *مستمر الى* ${reqXp}\n*المستوى* : ${role}`
  
 
 
@@ -1509,7 +1509,7 @@ replay('*لقد تم رفع الحظر عن هذه المجموعة بنجاح �
   }
   break
 
-case 'قائمه رد تلقائي': case 'supportgc':
+case 'support': case 'قائمة تلقائي':
     
     reply`*♡ اللَّـهِ الرَّحْــمَـٰنِ الرَّحِيــمِ ♡*
 
@@ -1599,7 +1599,7 @@ xfarrapi.Film(q)
 break
 
 
-case 'wallpaper': case 'animewallpaper': case 'خلفيه': {
+case 'wallpaper': case 'خلفية': case 'خلفيه': {
 if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply("*أكتب اسم الانمي أو فلم بلإنغليزي من فضلك*❄️🤍")
@@ -3837,23 +3837,6 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 } 
 break
 				
-case 'soulmate': case 'فارس ': {
-    if (isBan) return reply(mess.banned)
-    if (isBanChat) return reply(mess.bangc)
-if (!m.isGroup) return replay(`${mess.grouponly}`)
-let member = participants.map(u => u.id)
-let me = m.sender
-let jodoh = member[Math.floor(Math.random() * member.length)]
-let jawab = `  فارس أحلامي أحبو😔💘
-@${me.split('@')[0]}`
-let ments = [me, jodoh]
-let buttons = [
-{ buttonId: '❤️🌚', buttonText: { displayText: 'يب👀❤️' }, type: 1 }
-]
-await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: ments})
-} 
-break
-
 case 'صغير': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
@@ -5186,10 +5169,10 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 ♡┃ - تطقيم 
 ♤┃ تطقيمات عشوائية 
 
-♡┃ - الامبراطورة أو نيرو
+♡┃ - بوتة
 ♤┃ تعرف بوت هل شغال أو لا
 
-♡┃ - قائمه رد تلقائي
+♡┃ - قائمة تلقائي
 ♤┃ يعطيك قائمة رد تلقائي
 
 
@@ -5335,10 +5318,10 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
  ♡┃ - مهنتك 
  ♤┃ مهنتك المستقبلية 
 
-♡┃ - غني
+♡┃ - الفقير
 ♤┃ يجيب لك أغنى شخص في كروب
 
-♡┃ - فقير
+♡┃ - الفقير
 ♤┃ يجيب لك شخص فقير
 
 ♡┃ - لطيف
@@ -5364,9 +5347,6 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 
  ♡┃- اختفاء 
  ♤┃ ترك سبب ذهابك 
- 
-♡┃ - فارس
-♤┃ يجيب لك فارس احلام نيرو
 
 ♡┃ - نيرو سان
 ♤┃ نيرو تتكلم لك
@@ -5429,9 +5409,8 @@ case 'help': case 'h': case 'menu': case 'الاوامر': case 'اوامر': ca
 let buttonshelpm = [
 	
     {buttonId: `${prefix}owner`, buttonText: {displayText: 'المطور👤'}, type: 1},
-	
+   
     {buttonId: `.help`, buttonText: {displayText: 'الاوامر🕊'}, type: 1},
-    
     ]
    
                 let buttonMessage = {
@@ -5455,7 +5434,7 @@ case '':
       mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
     
         
- const needhelpmenu = `*〘❄ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب -الاوامر${prefix}ولا تنسى وضع*❄〙* .`
+ const needhelpmenu = `*〘 ❄ هلا أن بوتة نيرو أقوى بوتة عربية في كل واتس نورتني ونورت دنيا لو بدك قائمة اوامر أكتب -الاوامر${prefix}ولا تنسى وضع*❄ 〙* .`
      
          let butRun = [
                 {buttonId: `${prefix}help`, buttonText: {displayText: '❄ نيرو الاوامر ❄'}, type: 1}
@@ -5473,7 +5452,7 @@ break
 
 
 
-case 'نيرو':case 'الإمبراطورة':
+case 'بوتة':case 'الإمبراطورة':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
